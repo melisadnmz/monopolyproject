@@ -1,23 +1,24 @@
 import java.util.Random;
 
 public class Die {
-    private int value;
+    private int faceValue;
 
-    public Die(int value) {
-        this.value = value;
+    public Die(int faceValue) {
+        this.faceValue = faceValue;
     }
     public int rollDie(){
 
         int random = (int)(Math.random()*6) + 1; //genereting number between 1 and 6.
+        faceValue = random;
         return random;
     }
 
     public int getValue() {
-        return value;
+        return faceValue;
     }
 
     public void setValue(int value) {
-        this.value = value;
+        this.faceValue = value;
     }
 
 
