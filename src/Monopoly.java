@@ -1,12 +1,25 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Monopoly {
 
-    private ArrayList<Player> players;
-    private Die die1;
-    private Die die2;
+    private ArrayList<Player> players = new ArrayList<Player>();
+    private ArrayList<Player> bankrupted = new ArrayList<Player>();
+    private Die die1 = new Die();
+    private Die die2 = new Die();
     private int diece;
     private int cycle;
+    private int currentIndex;
+    private int numOfPlayer;
+
+    public int getCurrentIndex() {
+        return currentIndex;
+    }
+
+    public void setCurrentIndex(int currentIndex) {
+        this.currentIndex = currentIndex;
+    }
 
     public int getDiece() {
         return diece;
@@ -24,31 +37,49 @@ public class Monopoly {
         this.cycle = cycle;
     }
 
-    private Board board;
+    private Board board ;
 
 
-    public Monopoly() {
+    public Monopoly(ArrayList<Player> player, Board board) {
+        this.players.addAll(player);
+        this.board = board;
+        this.numOfPlayer = players.size();
 
     }
 
     public void startGame() {
+        int newLocation;
+        while(numOfPlayer>1){
+        for(int i=0;i<=numOfPlayer ;i++) {
+            System.out.println(toStringBefore(players.get(i)));
+            //Arraylist in ilk elemanı zar atcak die1.rolldie çağırcaz
+            setDiece(die1.rollDie() + die2.rollDie());
+            setCurrentIndex(players.get(0).getSquareNum().getIndex());
+            //player1.setSquare ine diedan geleni ekle
+            newLocation = diece + currentIndex;
+            if ((newLocation) >= 40){
+                newLocation -= 40;
+               //başlangıctan gecti para alacak
+            }
+            players.get(i).setSquareNum(board.getSquare()[newLocation]);
+            //oyuncuya square ine göre yapacağımız değişiklik için bi fonksiyon yazmalıyız
+            System.out.println(toStringAfter(players.get(i)));
+            //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
 
-        //Arraylist in ilk elemanı zar atcak die1.rolldie çağırcaz
-        setDiece(die1.rollDie() + die2.rollDie);
-        //player1.setSquare ine diedan geleni ekle
-        players.get(0).setSquareNum(squares[diece]);
-        //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
+
+        }
+        cycle++;
+        }
 
     }
 
 
     public String toStringBefore(Player player) { //Duzenlenecek
-        return player.getName() + "\n" + player.getTurn() + "\n" + cycle + "\n" + player.getSquareNum()
-        " buraya square bilgileri gelecek " +;
+        return player.getName() + "\n" + player.getTurn() +  "\nSquare " + player.getSquareNum().getIndex() ;
     }
     public String toStringAfter(Player player) { //Duzenlenecek
-        return "Die 1 : "die1.getFaceValue + "Die2 : " + die2.getFaceValue + "sum : "+ diece + cycle + "\n" + player.getSquareNum()
-        " buraya square bilgileri gelecek " +;
+        return "Die 1 : " + die1.getValue() + " Die2 : " + die2.getValue() + " sum : "+ diece  + "\n" + player.getSquareNum().getIndex() +
+        " buraya square bilgileri gelecek " ;
     }
 
     public ArrayList<Player> getPlayers() {

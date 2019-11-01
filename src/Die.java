@@ -3,7 +3,7 @@ import java.util.Random;
 public class Die {
     private int faceValue;
 
-    public Die(int faceValue) {
+    public Die() {
         this.faceValue = faceValue;
     }
     public int rollDie(){
