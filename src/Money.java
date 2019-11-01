@@ -1,5 +1,5 @@
 public class Money {
-    private double amount;
+    private double amount=200.0;
 
     public void setMoney(double amount) {
         this.amount = amount;

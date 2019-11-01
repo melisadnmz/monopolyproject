@@ -7,6 +7,7 @@ public class Monopoly {
     private Die die2;
     private int diece;
     private int cycle;
+    private Board board;
 
     public int getDiece() {
         return diece;
@@ -24,8 +25,6 @@ public class Monopoly {
         this.cycle = cycle;
     }
 
-    private Board board;
-
 
     public Monopoly() {
 
@@ -33,22 +32,23 @@ public class Monopoly {
 
     public void startGame() {
 
+
         //Arraylist in ilk elemanı zar atcak die1.rolldie çağırcaz
-        setDiece(die1.rollDie() + die2.rollDie);
+        setDiece(die1.rollDie() + die2.rollDie());
         //player1.setSquare ine diedan geleni ekle
-        players.get(0).setSquareNum(squares[diece]);
+        players.get(0).setSquareNum(board.getSquares()[diece]);
         //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
 
     }
 
 
     public String toStringBefore(Player player) { //Duzenlenecek
-        return player.getName() + "\n" + player.getTurn() + "\n" + cycle + "\n" + player.getSquareNum()
-        " buraya square bilgileri gelecek " +;
+        return player.getName() + "\n" + player.getTurn() + "\n" + cycle + "\n" + player.getSquareNum()+
+        " buraya square bilgileri gelecek " ;
     }
     public String toStringAfter(Player player) { //Duzenlenecek
-        return "Die 1 : "die1.getFaceValue + "Die2 : " + die2.getFaceValue + "sum : "+ diece + cycle + "\n" + player.getSquareNum()
-        " buraya square bilgileri gelecek " +;
+        return "Die 1 : "+ die1.getValue() + "Die2 : " + die2.getValue() + "sum : "+ diece + cycle + "\n" + player.getSquareNum()+
+        " buraya square bilgileri gelecek " ;
     }
 
     public ArrayList<Player> getPlayers() {
