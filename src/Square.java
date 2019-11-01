@@ -5,7 +5,7 @@ public class Square {
     private int fee;
     private String owner;
 
-    public Square(String name, String type, int index,int fee) {
+    public Square(String name, String type, int index, int fee) {
         this.name = name;
         this.index = index;
         this.type = type;

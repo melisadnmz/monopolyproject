@@ -13,6 +13,7 @@ public class Player {
         this.money = money;
         this.turn = turn;
         this.piece = piece;
+
     }
 
     public String getName() {
