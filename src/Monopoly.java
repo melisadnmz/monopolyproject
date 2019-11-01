@@ -2,35 +2,53 @@ import java.util.ArrayList;
 
 public class Monopoly {
 
-    private  ArrayList<Player> players;
+    private ArrayList<Player> players;
     private Die die1;
     private Die die2;
+    private int diece;
+    private int cycle;
+
+    public int getDiece() {
+        return diece;
+    }
+
+    public void setDiece(int diece) {
+        this.diece = diece;
+    }
+
+    public int getCycle() {
+        return cycle;
+    }
+
+    public void setCycle(int cycle) {
+        this.cycle = cycle;
+    }
 
     private Board board;
 
 
-    public Monopoly(){
+    public Monopoly() {
 
     }
 
-    public void startGame(){
+    public void startGame() {
 
         //Arraylist in ilk elemanı zar atcak die1.rolldie çağırcaz
-        diece = die1.rollDie() + die2.rollDie;
+        setDiece(die1.rollDie() + die2.rollDie);
         //player1.setSquare ine diedan geleni ekle
-        players.get(0).setSquareNum(diece);
+        players.get(0).setSquareNum(squares[diece]);
         //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
 
     }
 
 
-    public String toString() { //Duzenlenecek
-        return "Monopoly{" +
-                "players=" + players +
-                ", die1=" + die1 +
-                ", die2=" + die2 +
-                ", board=" + board +
-                '}';
+    public String toStringBefore(Player player) { //Duzenlenecek
+        return player.getName() + "\n" + player.getTurn() + "\n" + cycle + "\n" + player.getSquareNum()
+        " buraya square bilgileri gelecek " +;
+    }
+    public String toStringAfter(Player player) { //Duzenlenecek
+        return "Die 1 : "die1.getFaceValue + "Die2 : " + die2.getFaceValue + "sum : "+ diece + cycle + "\n" + player.getSquareNum()
+        " buraya square bilgileri gelecek " +;
     }
 
     public ArrayList<Player> getPlayers() {
