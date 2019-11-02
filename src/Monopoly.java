@@ -50,25 +50,25 @@ public class Monopoly {
     public void startGame() {
         int newLocation;
         while(numOfPlayer>1){
-        for(int i=0;i<=numOfPlayer ;i++) {
-            System.out.println(toStringBefore(players.get(i)));
-            //Arraylist in ilk elemanı zar atcak die1.rolldie çağırcaz
-            setDiece(die1.rollDie() + die2.rollDie());
-            setCurrentIndex(players.get(0).getSquareNum().getIndex());
-            //player1.setSquare ine diedan geleni ekle
-            newLocation = diece + currentIndex;
-            if ((newLocation) >= 40){
-                newLocation -= 40;
-               //başlangıctan gecti para alacak
+            for(int i=0;i<=numOfPlayer ;i++) {
+                System.out.println(toStringBefore(players.get(i)));
+                //Arraylist in ilk elemanı zar atcak die1.rolldie çağırcaz
+                setDiece(die1.rollDie() + die2.rollDie());
+                setCurrentIndex(players.get(0).getSquareNum().getIndex());
+                //player1.setSquare ine diedan geleni ekle
+                newLocation = diece + currentIndex;
+                if ((newLocation) >= 40){
+                    newLocation -= 40;
+                    //başlangıctan gecti para alacak
+                }
+                players.get(i).setSquareNum(board.getSquare()[newLocation]);
+                //oyuncuya square ine göre yapacağımız değişiklik için bi fonksiyon yazmalıyız
+                System.out.println(toStringAfter(players.get(i)));
+                //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
+
+
             }
-            players.get(i).setSquareNum(board.getSquare()[newLocation]);
-            //oyuncuya square ine göre yapacağımız değişiklik için bi fonksiyon yazmalıyız
-            System.out.println(toStringAfter(players.get(i)));
-            //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
-
-
-        }
-        cycle++;
+            cycle++;
         }
 
     }
@@ -79,7 +79,7 @@ public class Monopoly {
     }
     public String toStringAfter(Player player) { //Duzenlenecek
         return "Die 1 : " + die1.getValue() + " Die2 : " + die2.getValue() + " sum : "+ diece  + "\n" + player.getSquareNum().getIndex() +
-        " buraya square bilgileri gelecek " ;
+                " buraya square bilgileri gelecek " ;
     }
 
     public ArrayList<Player> getPlayers() {

@@ -6,8 +6,6 @@ public class Piece {
         return shapeType;
     }
 
-
-
     public String getShapeType() {
         return shapeType;
     }
