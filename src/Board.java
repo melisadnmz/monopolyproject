@@ -2,8 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 public class Board {
-
-
     private Square squares[] = new Square[40];
 
     public void createSquare() {
@@ -23,7 +21,7 @@ public class Board {
 
     }
 
-    public Square[] getSquares() {
+    public Square[] getSquare(){
         return squares;
     }
 }

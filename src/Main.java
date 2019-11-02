@@ -8,10 +8,14 @@ public class Main {
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
         int numberOfPlayers = numberOfPlayers();
         String[] nameOfPlayers = playerNames(numberOfPlayers);
-        Player[] players = createPlayers(nameOfPlayers,numberOfPlayers,money);
+        ArrayList<Player> players = createPlayers(nameOfPlayers,numberOfPlayers,money);
         for (Player i : players) {
             System.out.println(i.getName() + " : $" + i.getMoney().getAmount() + " -> " + i.getTurn());
         }
+        Board board = new Board();
+        //board.createSquare();
+        //Monopoly monopoly = new Monopoly(players,board);
+        //monopoly.startGame();
     }
 
 
@@ -52,11 +56,11 @@ public class Main {
             return true;
     }
 
-    private static Player[] createPlayers(String[] names, int number, Money money){
-        Player[] players = new Player[number];
+    private static ArrayList<Player> createPlayers(String[] names, int number, Money money){
+        ArrayList<Player> players = new ArrayList<>(number);
         for(int i=0;i<number;i++){
             Player person= new Player(names[i],money,i+1);
-            players[i]=person;
+            players.add(i,person);
         }
         return players;
     }

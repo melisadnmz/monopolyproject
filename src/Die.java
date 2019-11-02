@@ -1,10 +1,11 @@
+import java.util.Random;
+
 public class Die {
     private int faceValue;
 
-    public Die(int faceValue) {
+    public Die() {
         this.faceValue = faceValue;
     }
-
     public int rollDie(){
 
         int random = (int)(Math.random()*6) + 1; //genereting number between 1 and 6.
