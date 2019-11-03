@@ -1,17 +1,28 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class Monopoly {
 
-    private ArrayList<Player> players = new ArrayList<Player>();
-    private ArrayList<Player> bankrupted = new ArrayList<Player>();
     private Die die1 = new Die();
     private Die die2 = new Die();
     private int diece;
     private int cycle;
     private int currentIndex;
     private int numOfPlayer;
+    private Board board;
+    private Square[] squares;
+    private ArrayList<Player> players = new ArrayList<>();
+    private ArrayList<Player> bankrupted = new ArrayList<>();
+
+
+    public Monopoly() {
+
+    }
+
+    public Monopoly(Board board,Square[] squares) {
+        this.board=board;
+        this.squares = squares;
+    }
 
     public int getCurrentIndex() {
         return currentIndex;
@@ -37,19 +48,28 @@ public class Monopoly {
         this.cycle = cycle;
     }
 
-    private Board board ;
-
-
-    public Monopoly(ArrayList<Player> player, Board board) {
-        this.players.addAll(player);
-        this.board = board;
-        this.numOfPlayer = players.size();
-
-    }
 
     public void startGame() {
-        int newLocation;
-        while(numOfPlayer>1){
+        System.out.println("Welcome Perfecto Monopoly Game Simulation!");
+        Money money= new Money();
+        numOfPlayer = numberOfPlayers();
+        String[] nameOfPlayers = playerNames(numOfPlayer);
+        money.initialMoney();
+        board.crSquare();
+        board.locationOfTax();
+        ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer,money);
+
+        for (Player i : players) {
+            System.out.println(i.getName() + " : $" + i.getMoney().getAmount() + " -> " + i.getTurn());
+        }
+
+        int i=0;
+        while (i<board.getSquare().length) {
+            System.out.println(board.getSquare()[i].getName() + board.getSquare()[i].getIndex() + " --> " + board.getSquare()[i].getFee());
+            i++;
+        }
+
+        /*while(numOfPlayer>1){
             for(int i=0;i<=numOfPlayer ;i++) {
                 System.out.println(toStringBefore(players.get(i)));
                 //Arraylist in ilk elemanı zar atcak die1.rolldie çağırcaz
@@ -70,7 +90,7 @@ public class Monopoly {
             }
             cycle++;
         }
-
+*/
     }
 
 
@@ -113,5 +133,53 @@ public class Monopoly {
     public void setBoard(Board board) {
         this.board = board;
     }
-}
 
+
+    public ArrayList<Player> createPlayers(String[] names, int number, Money money){
+        for(int i=0;i<number;i++){
+            Player person= new Player(names[i],money,i+1);
+            this.players.add(i,person);
+        }
+        return players;
+    }
+
+    public int numberOfPlayers() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter number of players(Number of players must be between 2 and 8): ");
+        int numberOfPlayers = scanner.nextInt();
+        //Check the number because of that players must be between 2-8.
+        while(numberOfPlayers < 2 || numberOfPlayers > 8) {
+            System.out.print("Number of players must be between 2 and 8. Please enter again: ");
+            numberOfPlayers = scanner.nextInt();
+        }
+        return numberOfPlayers;
+    }
+
+    public String[] playerNames(int numberOfPlayers){
+        Scanner scanner = new Scanner(System.in);
+        String[] playerNames = new String[numberOfPlayers];
+        int num=1;
+        while (num <= numberOfPlayers){
+            System.out.println("Please enter name for " + num + ". Player: ");
+            String name = scanner.nextLine();
+            if(controlForName(name,playerNames))
+                playerNames[num-1]=name;
+            else{
+                System.out.println("This name is already taken. Please entered again!");
+                num--;
+            }
+            num++;
+        }
+        return playerNames;
+    }
+
+    private boolean controlForName(String name, String[] names){
+
+        for (int i=0;i<names.length;i++)
+            if(name.toLowerCase().equals(names[i])) return false;
+        return true;
+    }
+
+
+
+}
