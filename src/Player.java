@@ -1,7 +1,7 @@
 public class Player extends Monopoly {
 
         private String name;
-        private Square squareNum;
+        private int squareNum;
         private Money money;
         private int turn;
         private Piece piece;
@@ -10,7 +10,7 @@ public class Player extends Monopoly {
 
      }
 
-     public Player(String name, Square squareNum, Money money, int turn, Piece piece) {
+     public Player(String name, int squareNum, Money money, int turn, Piece piece) {
             this.name = name;
             this.squareNum = squareNum;
             this.money = money;
@@ -35,11 +35,11 @@ public class Player extends Monopoly {
         this.money = money;
     }
 
-        public Square getSquareNum() {
+        public int getSquareNum() {
             return squareNum;
         }
 
-        public void setSquareNum(Square squareNum) {
+        public void setSquareNum(int squareNum) {
             this.squareNum = squareNum;
         }
 
