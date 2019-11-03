@@ -1,10 +1,14 @@
- public class Player {
+public class Player extends Monopoly {
 
         private String name;
         private Square squareNum;
         private Money money;
         private int turn;
         private Piece piece;
+
+     public Player() {
+
+     }
 
      public Player(String name, Money money, int turn) {
          this.name = name;
@@ -29,20 +33,20 @@
             this.name = name;
         }
 
+        public Money getMoney() {
+        return this.money;
+    }
+
+        public void setMoney(Money money) {
+        this.money = money;
+    }
+
         public Square getSquareNum() {
             return squareNum;
         }
 
         public void setSquareNum(Square squareNum) {
             this.squareNum = squareNum;
-        }
-
-        public Money getMoney() {
-            return money;
-        }
-
-        public void setMoney(Money money) {
-            this.money = money;
         }
 
         public int getTurn() {
@@ -60,4 +64,6 @@
         public void setPiece(Piece piece) {
             this.piece = piece;
         }
-    }
+
+
+}
