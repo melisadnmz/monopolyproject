@@ -1,7 +1,10 @@
-public class Money {
-    private double amount= 200.0;
+import java.util.Scanner;
 
-    public void setMoney(double amount) {
+public class Money extends Player {
+
+    private double amount= 0.0;
+
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
@@ -15,5 +18,12 @@ public class Money {
 
     public void increaseAmount(){
         amount++;
+    }
+
+    public void initialMoney(){
+        System.out.print("Please enter initial amount for players: ");
+        Scanner scanner = new Scanner(System.in);
+        amount= scanner.nextDouble();
+        setAmount(amount);
     }
 }
