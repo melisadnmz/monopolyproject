@@ -12,12 +12,13 @@ public class Money extends Player {
         return amount;
     }
 
-    public void decreaseAmount(){
-        amount--;
+    public void decreaseAmount(int money){
+
+        amount = amount - money;
     }
 
-    public void increaseAmount(){
-        amount++;
+    public void increaseAmount(int money){
+       amount = amount+money;
     }
 
     public void initialMoney(){

@@ -62,6 +62,10 @@ public class Board extends Monopoly {
         System.out.print("Please enter number of Tax square: ");
         Scanner scanner = new Scanner(System.in);
         numOfTax= scanner.nextInt();
+        while(numOfTax > 20) {
+            System.out.print("Number of Tax square must be below 20. Please enter again: ");
+            numOfTax = scanner.nextInt();
+        }
     }
 
     public double amountOfTax(){

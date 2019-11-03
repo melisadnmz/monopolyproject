@@ -10,12 +10,6 @@ public class Player extends Monopoly {
 
      }
 
-     public Player(String name, Money money, int turn) {
-         this.name = name;
-         this.money = money;
-         this.turn = turn;
-     }
-
      public Player(String name, Square squareNum, Money money, int turn, Piece piece) {
             this.name = name;
             this.squareNum = squareNum;
