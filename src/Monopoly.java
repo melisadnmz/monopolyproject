@@ -8,6 +8,7 @@ public class Monopoly {
     private int diece;
     private int cycle;
     private int currentIndex;
+    private int newLocation;
     private int numOfPlayer;
     private Board board;
     private Square[] squares;
@@ -48,60 +49,6 @@ public class Monopoly {
         this.cycle = cycle;
     }
 
-
-    public void startGame() {
-        System.out.println("Welcome Perfecto Monopoly Game Simulation!");
-        Money money= new Money();
-        numOfPlayer = numberOfPlayers();
-        String[] nameOfPlayers = playerNames(numOfPlayer);
-        money.initialMoney();
-        board.crSquare();
-        board.locationOfTax();
-        ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer,money);
-
-        for (Player i : players) {
-            System.out.println(i.getName() + " : $" + i.getMoney().getAmount() + " -> " + i.getTurn());
-        }
-
-        int i=0;
-        while (i<board.getSquare().length) {
-            System.out.println(board.getSquare()[i].getName() + board.getSquare()[i].getIndex() + " --> " + board.getSquare()[i].getFee());
-            i++;
-        }
-
-        /*while(numOfPlayer>1){
-            for(int i=0;i<=numOfPlayer ;i++) {
-                System.out.println(toStringBefore(players.get(i)));
-                //Arraylist in ilk elemanı zar atcak die1.rolldie çağırcaz
-                setDiece(die1.rollDie() + die2.rollDie());
-                setCurrentIndex(players.get(0).getSquareNum().getIndex());
-                //player1.setSquare ine diedan geleni ekle
-                newLocation = diece + currentIndex;
-                if ((newLocation) >= 40){
-                    newLocation -= 40;
-                    //başlangıctan gecti para alacak
-                }
-                players.get(i).setSquareNum(board.getSquare()[newLocation]);
-                //oyuncuya square ine göre yapacağımız değişiklik için bi fonksiyon yazmalıyız
-                System.out.println(toStringAfter(players.get(i)));
-                //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
-
-
-            }
-            cycle++;
-        }
-*/
-    }
-
-
-    public String toStringBefore(Player player) { //Duzenlenecek
-        return player.getName() + "\n" + player.getTurn() +  "\nSquare " + player.getSquareNum().getIndex() ;
-    }
-    public String toStringAfter(Player player) { //Duzenlenecek
-        return "Die 1 : " + die1.getValue() + " Die2 : " + die2.getValue() + " sum : "+ diece  + "\n" + player.getSquareNum().getIndex() +
-                " buraya square bilgileri gelecek " ;
-    }
-
     public ArrayList<Player> getPlayers() {
         return players;
     }
@@ -135,9 +82,88 @@ public class Monopoly {
     }
 
 
-    public ArrayList<Player> createPlayers(String[] names, int number, Money money){
+
+    public void startGame() {
+        System.out.println("Welcome Perfecto Monopoly Game Simulation!");
+        numOfPlayer = numberOfPlayers();
+        String[] nameOfPlayers = playerNames(numOfPlayer);
+        ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer);
+        board.crSquare();
+        board.locationOfTax();
+
+        System.out.println("----------------Game starts...---------------\n");
+
+        int d1, d2, dcounter=0;
+        while(numOfPlayer>1){
+
+            for (int i = 0; i < numOfPlayer; i++) {
+                d1= die1.rollDie();
+                d2=  die2.rollDie();
+                setDiece(d1 + d2);
+                if(d1 == d2){
+                    i--;
+                    dcounter++;
+                    if(dcounter==3) {
+                        dcounter=0;
+                        continue;
+                    }
+                }else{
+                    dcounter=0;
+                }
+                setCurrentIndex(players.get(i).getSquareNum().getIndex());
+                newLocation = diece + currentIndex;
+                if ((newLocation) >= 39){
+                    newLocation -= 39;
+                    players.get(i).getMoney().increaseAmount(200);
+                    //başlangıctan gecti para alacak
+                }
+                players.get(i).setSquareNum(board.getSquare()[newLocation]);
+                //oyuncuya square ine göre yapacağımız değişiklik için bi fonksiyon yazmalıyız (for 2nd iteration)
+
+                System.out.println(toStringAfter(players.get(i)));
+                //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
+
+
+
+            cycle++;
+            }
+        }
+
+
+
+
+        for (Player i : players) {
+            System.out.println(i.getName() + " : $" + i.getMoney().getAmount() + " -> " + i.getTurn() + " : " + i.getPiece().getShapeType());
+        }
+
+        int i=0;
+        while (i<board.getSquare().length) {
+            System.out.println(board.getSquare()[i].getName() + board.getSquare()[i].getIndex() + " --> " + board.getSquare()[i].getFee());
+            i++;
+        }
+
+
+    }
+
+
+    public String toStringBefore(Player player) { //Duzenlenecek
+        return player.getName() + "\n" + player.getTurn() +  "\nSquare " + player.getSquareNum().getIndex() ;
+    }
+    public String toStringAfter(Player player) { //Duzenlenecek
+        return "Die 1 : " + die1.getValue() + " Die2 : " + die2.getValue() + " sum : "+ diece  + "\n" + player.getSquareNum().getIndex() +
+                " buraya square bilgileri gelecek " ;
+    }
+
+
+    public ArrayList<Player> createPlayers(String[] names, int number){
+        Money intMoney = new Money();
+        intMoney.initialMoney();
         for(int i=0;i<number;i++){
-            Player person= new Player(names[i],money,i+1);
+            Money money=intMoney;
+            Piece piece=new Piece();
+            Player person= new Player(names[i],board.getSquare()[0],money,i+1,piece);
+            piece.setShapeType(piece.getPieces()[i]);
+            person.setPiece(piece);
             this.players.add(i,person);
         }
         return players;
