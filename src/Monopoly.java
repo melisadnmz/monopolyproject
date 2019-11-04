@@ -10,20 +10,16 @@ public class Monopoly {
     private int currentIndex;
     private int newLocation;
     private int numOfPlayer;
-    private Board board;
-    private Square[] squares;
     private ArrayList<Player> players = new ArrayList<>();
-    private ArrayList<Player> bankrupted = new ArrayList<>();
 
 
     public Monopoly() {
-
     }
 
-    public Monopoly(Board board,Square[] squares) {
+    /*public Monopoly(Board board,Square[] squares) {
         this.board=board;
         this.squares = squares;
-    }
+    }*/
 
     public int getCurrentIndex() {
         return currentIndex;
@@ -73,24 +69,18 @@ public class Monopoly {
         this.die2 = die2;
     }
 
-    public Board getBoard() {
-        return board;
-    }
-
-    public void setBoard(Board board) {
-        this.board = board;
-    }
-
-
 
     public void startGame() {
+        Board board = new Board();
+        Square[] squares = new Square[40];
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
         numOfPlayer = numberOfPlayers();
         String[] nameOfPlayers = playerNames(numOfPlayer);
         board.crSquare();
         board.locationOfTax();
-        ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer);
+        ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer,board);
         ArrayList<Player> losers=new ArrayList<>();
+        decideTurn();
 
         System.out.println("----------------Game starts...---------------\n");
 
@@ -123,10 +113,10 @@ public class Monopoly {
 
                 System.out.println(toStringAfter(players.get(i)));
                 //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
-                organizeTaxSquare(players.get(i));
+                organizeTaxSquare(players.get(i),board);
 
 
-                if(players.get(i).getMoney().getAmount() < 0){
+                if(players.get(i).getMoney().getAmount() <= 0){
                     losers.add(players.get(i));
                     players.remove(players.get(i));
                     numOfPlayer--;
@@ -170,7 +160,7 @@ public class Monopoly {
     }
 
 
-    public ArrayList<Player> createPlayers(String[] names, int number){
+    public ArrayList<Player> createPlayers(String[] names, int number, Board board){
         Money intMoney = new Money();
         intMoney.initialMoney();
         for(int i=0;i<number;i++){
@@ -222,11 +212,54 @@ public class Monopoly {
         return true;
     }
 
-    private void organizeTaxSquare(Player player){
+    private void organizeTaxSquare(Player player, Board board){
         if(board.getSquare()[player.getSquareNum()].getType().equals("Tax")){
             player.getMoney().decreaseAmount((board.getSquare()[player.getSquareNum()].getFee()));
             System.out.println("Player " + player.getTurn() + "loses -$" + board.getSquare()[player.getSquareNum()].getFee());
         }
     }
 
+    public void decideTurn(){
+        ArrayList<Player> temp = new ArrayList<Player>();
+        System.out.println();
+        System.out.println("Player are rolling dice for decide turns.");
+        int d1, d2, sum;
+        System.out.println();
+        for (int i = 0; i < numOfPlayer; i++) {
+            //to string 1
+            d1 = die1.rollDie();
+            d2 = die2.rollDie();
+            sum = d1 + d2;
+            players.get(i).setDiece(sum);
+            System.out.println(players.get(i).getName() + " rolled " + players.get(i).getDiece() + ".");
+        }
+        System.out.println();
+
+        for (int i = 0; i < numOfPlayer; i++)
+        {
+            int where=0;
+            int value=0;
+            for (int j = 0; j < numOfPlayer; j++)
+            {
+                if(players.get(j).getDiece()> value){
+                    where=j;
+                    value=players.get(j).getDiece();
+                }
+            }
+            temp.add(players.get(where));
+            players.get(where).setDiece(0);
+        }
+
+        for (int j = 0; j < numOfPlayer; j++)
+        {
+            players.remove(0);
+            players.add(temp.get(j));
+        }
+        System.out.println("Player turn : ");
+        for (int j = 0; j < numOfPlayer; j++)
+        {
+            players.get(j).setTurn(j+1);
+            System.out.println("Player " + players.get(j).getTurn() + " " + players.get(j).getName());
+        }
+    }
 }
