@@ -59,5 +59,4 @@ public class Player extends Monopoly {
             this.piece = piece;
         }
 
-
 }
