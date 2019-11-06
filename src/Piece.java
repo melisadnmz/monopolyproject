@@ -1,11 +1,14 @@
-public class Piece {
+public class Piece extends Player {
 
     private final String[] pieces={"Car","Baloon", "Wheel", "Shoe", "Apple", "Plane", "Train", "Hat"};
     private String shapeType;
 
-    public String Piece(String shapeType) {
+    public Piece(){
+    shapeType="";
+    }
+
+    public Piece(String shapeType) {
         this.shapeType = shapeType;
-        return shapeType;
     }
 
     public String[] getPieces() {

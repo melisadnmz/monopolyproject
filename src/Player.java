@@ -32,10 +32,6 @@ public class Player extends Monopoly {
         return this.money;
     }
 
-        public void setMoney(Money money) {
-        this.money = money;
-    }
-
         public int getSquareNum() {
             return squareNum;
         }
@@ -44,9 +40,7 @@ public class Player extends Monopoly {
             this.squareNum = squareNum;
         }
 
-        public int getTurn() {
-            return turn;
-        }
+        public int getTurn() { return turn; }
 
         public void setTurn(int turn) {
             this.turn = turn;
@@ -60,11 +54,7 @@ public class Player extends Monopoly {
             this.piece = piece;
         }
 
-    public boolean isLosed() {
-        return losed;
-    }
+        public boolean isLosed() { return losed; }
 
-    public void setLosed(boolean losed) {
-        this.losed = losed;
-    }
+        public void setLosed(boolean losed) { this.losed = losed; }
 }

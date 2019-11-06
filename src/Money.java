@@ -2,7 +2,11 @@ import java.util.Scanner;
 
 public class Money extends Player {
 
-    private double amount= 0.0;
+    public Money(){
+        amount = 0.0;
+    }
+
+    private double amount;
 
     public void setAmount(double amount) {
         this.amount = amount;
