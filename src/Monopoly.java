@@ -231,7 +231,7 @@ public class Monopoly {
             d2 = die2.rollDie();
             sum = d1 + d2;
             players.get(i).setDiece(sum);
-            System.out.println(players.get(i).getName() + " rolled " + players.get(i).getDiece() + ".");
+            System.out.println(players.get(i).getName() + " rolled " + d1 + "-" + d2 + "." + " Sum of:" + players.get(i).getDiece());
         }
         System.out.println();
 
@@ -259,7 +259,7 @@ public class Monopoly {
         for (int j = 0; j < numOfPlayer; j++)
         {
             players.get(j).setTurn(j+1);
-            System.out.println("Player " + players.get(j).getTurn() + " " + players.get(j).getName());
+            System.out.println("Player " + players.get(j).getTurn() + " --> " + players.get(j).getName() + " and " + players.get(j).getName() + "'s piece is: " + players.get(j).getPiece().getShapeType());
         }
     }
 }
