@@ -13,8 +13,8 @@ public class Money extends Player {
     }
 
     public void decreaseAmount(double money){
-
         amount = amount - money;
+        if(amount < 0) amount = 0;
     }
 
     public void increaseAmount(double money){
