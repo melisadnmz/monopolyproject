@@ -10,16 +10,13 @@ public class Monopoly {
     private int currentIndex;
     private int newLocation;
     private int numOfPlayer;
+    private boolean losed=false;
     private ArrayList<Player> players = new ArrayList<>();
 
 
     public Monopoly() {
     }
 
-    /*public Monopoly(Board board,Square[] squares) {
-        this.board=board;
-        this.squares = squares;
-    }*/
 
     public int getCurrentIndex() {
         return currentIndex;
@@ -79,15 +76,16 @@ public class Monopoly {
         board.crSquare();
         board.locationOfTax();
         ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer,board);
-        ArrayList<Player> losers=new ArrayList<>();
         decideTurn();
 
-        System.out.println("----------------Game starts...---------------\n");
+        System.out.println("----------------Game starts---------------\n");
 
         int d1, d2, dcounter=0;
         while(numOfPlayer>1){
             System.out.println("---------------Cycle " + cycle + "---------------\n");
+
             for (int i = 0; i < numOfPlayer; i++) {
+                System.out.println(toStringBefore(players.get(i),board));
                 //to string 1
                 d1= die1.rollDie();
                 d2=  die2.rollDie();
@@ -103,61 +101,68 @@ public class Monopoly {
                 }
                 setCurrentIndex(players.get(i).getSquareNum());
                 newLocation = diece + currentIndex;
+                System.out.println("After rolling diece");
                 if ((newLocation) >= 39){
                     newLocation -= 39;
                     players.get(i).getMoney().increaseAmount(200);
+                    System.out.println(players.get(i).getName() + " has past the start and won 200$");
                     //başlangıctan gecti para alacak
                 }
                 players.get(i).setSquareNum(board.getSquare()[newLocation].getIndex());
-                //oyuncuya square ine göre yapacağımız değişiklik için bi fonksiyon yazmalıyız (for 2nd iteration)
 
-                System.out.println(toStringAfter(players.get(i)));
-                //hangi kareye geldiyse o karenin özelliklerine bakmalıyız vergi vericek mi gibi
+
+                System.out.println(toStringAfter(players.get(i),board));
                 organizeTaxSquare(players.get(i),board);
-
+                System.out.println(toStringMoney(players.get(i)));
 
                 if(players.get(i).getMoney().getAmount() <= 0){
-                    losers.add(players.get(i));
-                    players.remove(players.get(i));
-                    numOfPlayer--;
-
+                    players.get(i).setLosed(true);
+                    losed= true;
                 }
 
                 if(d1 == d2)
                     i--;
-                //to string ikincisi
+
             }
-            for (Player k : players) {
-                System.out.println(k.getName() + " : $" + k.getMoney().getAmount() + " -> " + k.getTurn() + " : " + k.getPiece().getShapeType());
-            }
+
             cycle++;
+            if(losed) {
+                changeTurn(players);
+            }
+
 
         }
+        System.out.println("---------------Game Over-------------\n----------" + players.get(0).getName() + " is winner-----------");
+
+    }
 
 
+    public String toStringBefore(Player player , Board board) { //Duzenlenecek
+        return player.getName() + " is " + player.getTurn() +  ". player \nIn " + player.getSquareNum() + " square right now.\n" +
+                "It is "+ board.getSquare()[player.getSquareNum()].getType() +" square\nHas "+ player.getMoney().getAmount()+"$\n   --------------" ;
+    }
+    public String toStringAfter(Player player, Board board) { //Duzenlenecek
+        return "Die 1 : " + die1.getValue() + " Die 2 : " + die2.getValue() + " sum : "+ diece  + "\n" + player.getName() + " is in " +
+                player.getSquareNum() + " square now\nIt is "+ board.getSquare()[player.getSquareNum()].getType() +" square" ;
+    }
 
+    public String toStringMoney(Player player) {
+        return "Total money is : " + player.getMoney().getAmount() +"\n ------------------------------";
+    }
 
-     /*   for (Player i : players) {
-            System.out.println(i.getName() + " : $" + i.getMoney().getAmount() + " -> " + i.getTurn() + " : " + i.getPiece().getShapeType());
+    public void changeTurn(ArrayList<Player> losers){
+        for(int i = 0;i<players.size();i++){
+           if(players.get(i).isLosed()){
+               players.remove(players.get(i));
+               numOfPlayer--;
+           }
         }
-
-         int i=0;
-        while (i<board.getSquare().length) {
-            System.out.println(board.getSquare()[i].getName() + board.getSquare()[i].getIndex() + " --> " + board.getSquare()[i].getFee());
-            i++;
-        } */
-
-
+        for(int i = 0;i<players.size();i++){
+           players.get(i).setTurn(i+1);
+        }
+        losed=false;
     }
 
-
-    public String toStringBefore(Player player) { //Duzenlenecek
-        return player.getName() + "\n" + player.getTurn() +  "\nSquare " + player.getSquareNum() ;
-    }
-    public String toStringAfter(Player player) { //Duzenlenecek
-        return "Die 1 : " + die1.getValue() + " Die2 : " + die2.getValue() + " sum : "+ diece  + "\n" + player.getSquareNum() +
-                " buraya square bilgileri gelecek " ;
-    }
 
 
     public ArrayList<Player> createPlayers(String[] names, int number, Board board){
@@ -215,14 +220,14 @@ public class Monopoly {
     private void organizeTaxSquare(Player player, Board board){
         if(board.getSquare()[player.getSquareNum()].getType().equals("Tax")){
             player.getMoney().decreaseAmount((board.getSquare()[player.getSquareNum()].getFee()));
-            System.out.println("Player " + player.getTurn() + "loses -$" + board.getSquare()[player.getSquareNum()].getFee());
+            System.out.println( player.getName() + " loses -$" + board.getSquare()[player.getSquareNum()].getFee() + " for tax");
         }
     }
 
     public void decideTurn(){
         ArrayList<Player> temp = new ArrayList<Player>();
         System.out.println();
-        System.out.println("Player are rolling dice for decide turns.");
+        System.out.println("Players are rolling diece for decide turns.");
         int d1, d2, sum;
         System.out.println();
         for (int i = 0; i < numOfPlayer; i++) {
