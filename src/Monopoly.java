@@ -121,7 +121,7 @@ public class Monopoly {
                 }
 
                 if(d1 == d2)
-                    i--;
+                    if(!players.get(i).isLosed()) i--;
 
             }
 
