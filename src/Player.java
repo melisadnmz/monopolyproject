@@ -5,7 +5,7 @@ public class Player extends Monopoly {
         private Money money;
         private int turn;
         private Piece piece;
-        private boolean losed;
+        private boolean lost;
 
      public Player() {
 
@@ -17,8 +17,7 @@ public class Player extends Monopoly {
             this.money = money;
             this.turn = turn;
             this.piece = piece;
-
-        }
+     }
 
         public String getName() {
             return name;
@@ -54,7 +53,7 @@ public class Player extends Monopoly {
             this.piece = piece;
         }
 
-        public boolean isLosed() { return losed; }
+        public boolean isLost() { return lost; }
 
-        public void setLosed(boolean losed) { this.losed = losed; }
+        public void setLost(boolean lost) { this.lost = lost; }
 }
