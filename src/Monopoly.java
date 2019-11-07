@@ -5,18 +5,17 @@ public class Monopoly {
 
     private Die die1 = new Die();
     private Die die2 = new Die();
-    private int diece;
+    private int dice;
     private int cycle = 1;
     private int currentIndex;
     private int newLocation;
     private int numOfPlayer;
-    private boolean losed=false;
+    private boolean lost =false;
     private ArrayList<Player> players = new ArrayList<>();
 
 
     public Monopoly() {
     }
-
 
     public int getCurrentIndex() {
         return currentIndex;
@@ -26,12 +25,12 @@ public class Monopoly {
         this.currentIndex = currentIndex;
     }
 
-    public int getDiece() {
-        return diece;
+    public int getDice() {
+        return dice;
     }
 
-    public void setDiece(int diece) {
-        this.diece = diece;
+    public void setDice(int dice) {
+        this.dice = dice;
     }
 
     public int getCycle() {
@@ -50,26 +49,11 @@ public class Monopoly {
         this.players = players;
     }
 
-    public Die getDie1() {
-        return die1;
-    }
-
-    public void setDie1(Die die1) {
-        this.die1 = die1;
-    }
-
-    public Die getDie2() {
-        return die2;
-    }
-
-    public void setDie2(Die die2) {
-        this.die2 = die2;
-    }
-
 
     public void startGame() {
         Board board = new Board();
-        Square[] squares = new Square[40];
+        int numOfLost = 0;
+        boolean defeated = false;
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
         numOfPlayer = numberOfPlayers();
         String[] nameOfPlayers = playerNames(numOfPlayer);
@@ -82,14 +66,14 @@ public class Monopoly {
 
         int d1, d2, dcounter=0;
         while(numOfPlayer>1){
+            numOfLost = 0;
             System.out.println("---------------Cycle " + cycle + "---------------\n");
 
             for (int i = 0; i < numOfPlayer; i++) {
                 System.out.println(toStringBefore(players.get(i),board));
-                //to string 1
                 d1= die1.rollDie();
                 d2=  die2.rollDie();
-                setDiece(d1 + d2);
+                setDice(d1 + d2);
                 if(d1 == d2){
                     dcounter++;
                     if(dcounter==3) {
@@ -100,8 +84,8 @@ public class Monopoly {
                     dcounter=0;
                 }
                 setCurrentIndex(players.get(i).getSquareNum());
-                newLocation = diece + currentIndex;
-                System.out.println("After rolling diece");
+                newLocation = dice + currentIndex;
+                System.out.println("After rolling dice");
                 if ((newLocation) >= 39){
                     newLocation -= 39;
                     players.get(i).getMoney().increaseAmount(200);
@@ -116,33 +100,42 @@ public class Monopoly {
                 System.out.println(toStringMoney(players.get(i)));
 
                 if(players.get(i).getMoney().getAmount() <= 0){
-                    players.get(i).setLosed(true);
-                    losed= true;
+                    players.get(i).setLost(true);
+                    lost = true;
                 }
 
                 if(d1 == d2)
-                    if(!players.get(i).isLosed()) i--;
+                    if(!players.get(i).isLost()) i--;
 
             }
 
             cycle++;
-            if(losed) {
-                changeTurn(players);
+            if(lost) {
+                for(int i = 0; i < numOfPlayer; i++){
+                    if(players.get(i).isLost()){
+                        numOfLost ++;
+                        if(numOfLost == numOfPlayer){
+                            defeated = true;
+                            System.out.println("---------------Game Over-------------\n*********" + players.get(i).getName() + " IS WINNER **********");
+                        }
+                        else System.out.println(players.get(i).getName() + " LOST THE GAME !!!");
+                    }
+                }
+                changeTurn(numOfLost);
             }
-
-
         }
-        System.out.println("---------------Game Over-------------\n----------" + players.get(0).getName() + " is winner-----------");
-
+        if(!defeated) {
+            System.out.println("---------------Game Over-------------\n*********" + players.get(0).getName() + " IS WINNER **********");
+        }
     }
 
 
-    public String toStringBefore(Player player , Board board) { //Duzenlenecek
+    public String toStringBefore(Player player , Board board) {
         return player.getName() + " is " + player.getTurn() +  ". player \nIn " + player.getSquareNum() + " square right now.\n" +
                 "It is "+ board.getSquare()[player.getSquareNum()].getType() +" square\nHas "+ player.getMoney().getAmount()+"$\n   --------------" ;
     }
-    public String toStringAfter(Player player, Board board) { //Duzenlenecek
-        return "Die 1 : " + die1.getValue() + " Die 2 : " + die2.getValue() + " sum : "+ diece  + "\n" + player.getName() + " is in " +
+    public String toStringAfter(Player player, Board board) {
+        return "Die 1 : " + die1.getValue() + " Die 2 : " + die2.getValue() + " sum : "+ dice + "\n" + player.getName() + " is in " +
                 player.getSquareNum() + " square now\nIt is "+ board.getSquare()[player.getSquareNum()].getType() +" square" ;
     }
 
@@ -150,17 +143,19 @@ public class Monopoly {
         return "Total money is : " + player.getMoney().getAmount() +"\n ------------------------------";
     }
 
-    public void changeTurn(ArrayList<Player> losers){
-        for(int i = 0;i<players.size();i++){
-           if(players.get(i).isLosed()){
+    public void changeTurn(int number){
+        for(int i = players.size()-1; i >= 0; i--){
+           if(players.get(i).isLost()){
                players.remove(players.get(i));
-               numOfPlayer--;
            }
         }
-        for(int i = 0;i<players.size();i++){
-           players.get(i).setTurn(i+1);
+        numOfPlayer =  numOfPlayer - number;
+        if(numOfPlayer > 0) {
+            for (int i = 0; i < players.size(); i++) {
+                players.get(i).setTurn(i + 1);
+            }
         }
-        losed=false;
+        lost =false;
     }
 
 
@@ -227,7 +222,7 @@ public class Monopoly {
     public void decideTurn(){
         ArrayList<Player> temp = new ArrayList<Player>();
         System.out.println();
-        System.out.println("Players are rolling diece for decide turns.");
+        System.out.println("Players are rolling dice for decide turns.");
         int d1, d2, sum;
         System.out.println();
         for (int i = 0; i < numOfPlayer; i++) {
@@ -235,8 +230,8 @@ public class Monopoly {
             d1 = die1.rollDie();
             d2 = die2.rollDie();
             sum = d1 + d2;
-            players.get(i).setDiece(sum);
-            System.out.println(players.get(i).getName() + " rolled " + d1 + "-" + d2 + "." + " Sum of:" + players.get(i).getDiece());
+            players.get(i).setDice(sum);
+            System.out.println(players.get(i).getName() + " rolled " + d1 + "-" + d2 + "." + " Sum of:" + players.get(i).getDice());
         }
         System.out.println();
 
@@ -246,15 +241,18 @@ public class Monopoly {
             int value=0;
             for (int j = 0; j < numOfPlayer; j++)
             {
-                if(players.get(j).getDiece()> value){
+                if(players.get(j).getDice()> value){
                     where=j;
-                    value=players.get(j).getDiece();
+                    value=players.get(j).getDice();
                 }
             }
             temp.add(players.get(where));
-            players.get(where).setDiece(0);
+            players.get(where).setDice(0);
         }
+        printTurn(temp);
+    }
 
+    public void printTurn(ArrayList<Player> temp){
         for (int j = 0; j < numOfPlayer; j++)
         {
             players.remove(0);
@@ -266,5 +264,6 @@ public class Monopoly {
             players.get(j).setTurn(j+1);
             System.out.println("Player " + players.get(j).getTurn() + " --> " + players.get(j).getName() + " and " + players.get(j).getName() + "'s piece is: " + players.get(j).getPiece().getShapeType());
         }
+
     }
 }
