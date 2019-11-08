@@ -4,15 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Board extends Monopoly {
+    private int numOfTax;
+    private Square[] squares = new Square[40];
 
     public Board(){
 
     }
-
-    private int numOfTax;
-
-
-    private Square[] squares = new Square[40];
 
     public void createSquare() { //This method will be use 2nd iteration.
         try{
@@ -48,13 +45,15 @@ public class Board extends Monopoly {
                 squares[rnd].setFee(amountOfTax());
             }else
                 i--;
-
         }
     }
 
     public void crSquare() {
         for(int i=0;i<squares.length;i++){
-                squares[i] = new Square("Square", "Other", i, 0);
+            if(i == 0){
+                squares[i] = new Square("Square", "GO", i, 0);
+            }
+            else squares[i] = new Square("Square", "Other", i, 0);
         }
     }
 
@@ -69,10 +68,9 @@ public class Board extends Monopoly {
     }
 
     public double amountOfTax(){
-        System.out.print("Please enter amount for each Tax square: ");
+        System.out.print("Please enter amount for Tax square: ");
         Scanner scanner = new Scanner(System.in);
         double inputFee = scanner.nextDouble();
         return inputFee;
     }
-
 }
