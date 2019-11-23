@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,14 +19,51 @@ public class Board extends Monopoly {
             int i = 0;
             while((s = in.readLine()) != null){
                 String[] var = s.split("-");
-                squares[i] = new Square(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                System.out.println("var1: "+ var[1]);
+                switch(var[1]){
+                    case "City":
+                        CitySquare city = new CitySquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                        squares[i] = city;
+                        break;
+                    case "Stations":
+                        StationsSquare station = new StationsSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                        squares[i] = station;
+                        break;
+                    case "Corporation":
+                        CorporationSquare corporation = new CorporationSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                        squares[i] = corporation;
+                        break;
+                    case "Jail":
+                        JailSquare jail = new JailSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                        squares[i] = jail;
+                        break;
+                    case "Tax":
+                        TaxSquare tax = new TaxSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                        squares[i] = tax;
+                        break;
+                    case "Chance":
+                        ChanceSquare chance = new ChanceSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                        squares[i] = chance;
+                        break;
+                    case "CommunityChest":
+                        CommunityChestSquare chest = new CommunityChestSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                        squares[i] = chest;
+                        break;
+                    case "Other":
+                        OtherSquare other = new OtherSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
+                        squares[i] = other;
+                        break;
+                    default: //for other
+                        System.out.println("Invalid Square Type!");
+                        break;
+                }
+                //squares[i] = new Square(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]));
                 i++;
             }
 
         }catch(Exception e){
             e.printStackTrace();
         }
-
     }
 
     public Square[] getSquare(){
@@ -49,12 +87,12 @@ public class Board extends Monopoly {
     }
 
     public void crSquare() {
-        for(int i=0;i<squares.length;i++){
+        /*for(int i=0;i<squares.length;i++){
             if(i == 0){
                 squares[i] = new Square("Square", "GO", i, 0);
             }
             else squares[i] = new Square("Square", "Other", i, 0);
-        }
+        }*/
     }
 
     public void numOfTax(){

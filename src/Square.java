@@ -1,5 +1,5 @@
 
-public class Square extends Board{
+public abstract class Square extends Board{
 
 
     private String name = "";
@@ -9,11 +9,11 @@ public class Square extends Board{
     private double fee = 0.0;
 
 
-    public Square(String name, String type, int index, double fee) {
-        this.name = name;
-        this.index = index;
-        this.type = type;
-        this.fee = fee;
+    public Square(String name,String type, int index, double fee) {
+     this.name=name;
+     this.type=type;
+     this.index=index;
+     this.fee=fee;
     }
 
     public void setName(String name) {
@@ -55,5 +55,7 @@ public class Square extends Board{
     public String getOwner(){
         return owner;
     }
+
+    public abstract void play();
 
 }
