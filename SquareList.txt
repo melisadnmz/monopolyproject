@@ -1,39 +1,40 @@
-GO-Start-0-0
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
-Income Tax-Tax-4-100
-Super Tax-Tax-38-200
+GO-Other-0-0
+Kasımpaşa-City-1-60
+Community Chest-CommunityChest-2-0
+Dolapdere-City-3-60
+Income Tax-Tax-4-200
+Haydarpaşa Tren Istasyonu-Stations-5-200
+Sultanahmet-City-6-100
+Chance-Chance-7-0
+Karaköy-City-8-100
+Sirkeci-City-9-120
+Jail-Jail-10-0
+Beyoğlu-City-11-140
+Electric Company-Corporation-12-150
+Beşiktaş-City-13-140
+Taksim-City-14-160
+Kadikoy Vapur Iskelesi-Stations-15-200
+Harbiye-City-16-180
+Community Chest-CommunityChest-17-0
+Şişli-City-18-180
+Mecidiyekoy-City-19-200
+Free Parking-Other-20-0
+Bostanci-City-21-220
+Chance-Chance-22-0
+Erenkoy-City-23-220
+Caddebostan-City-24-240
+Kabatas Vapur Iskelesi-Stations-25-200
+Nisantasi-City-26-260
+Tesvikiye-City-27-260
+Water Works-Corporation-28-150
+Macka-City-29-280
+GoToJail-Jail-30-0
+Levent-City-31-300
+Etiler-City-32-300
+Community Chest-CommunityChest-33-0
+Bebek-City-34-320
+Sirkeci Tren Istasyonu-Stations-35-200
+Chance-Chance-36-0
+Tarabya-City-37-350
+Super Tax-Tax-38-100
+Yenikoy-City-39-400
