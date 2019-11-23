@@ -1,0 +1,1123 @@
+Welcome Perfecto Monopoly Game Simulation!
+Please enter number of players(Number of players must be between 2 and 8): 6
+Please enter name for 1. Player: 
+melisa
+Please enter name for 2. Player: 
+berre
+Please enter name for 3. Player: 
+gulce
+Please enter name for 4. Player: 
+aras
+Please enter name for 5. Player: 
+aybars
+Please enter name for 6. Player: 
+evrim
+Please enter number of Tax square: 5
+Please enter amount for Tax square: 100
+Please enter amount for Tax square: 200
+Please enter amount for Tax square: 300
+Please enter amount for Tax square: 400
+Please enter amount for Tax square: 500
+Please enter initial amount for players: 200
+
+Players are rolling dice for decide turns.
+
+melisa rolled 6-1. Sum of:7
+berre rolled 6-6. Sum of:12
+gulce rolled 3-2. Sum of:5
+aras rolled 1-3. Sum of:4
+aybars rolled 4-2. Sum of:6
+evrim rolled 1-5. Sum of:6
+
+Player turn : 
+Player 1 --> berre and berre's piece is: Baloon
+Player 2 --> melisa and melisa's piece is: Car
+Player 3 --> aybars and aybars's piece is: Apple
+Player 4 --> evrim and evrim's piece is: Plane
+Player 5 --> gulce and gulce's piece is: Wheel
+Player 6 --> aras and aras's piece is: Shoe
+----------------Game starts---------------
+
+---------------Cycle 1---------------
+
+berre is 1. player 
+In 0 square right now.
+It is GO square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 3 sum : 7
+berre is in 7 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+melisa is 2. player 
+In 0 square right now.
+It is GO square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 1 sum : 7
+melisa is in 7 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+aybars is 3. player 
+In 0 square right now.
+It is GO square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 5 sum : 8
+aybars is in 8 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+evrim is 4. player 
+In 0 square right now.
+It is GO square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 6 sum : 11
+evrim is in 11 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+gulce is 5. player 
+In 0 square right now.
+It is GO square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 1 sum : 3
+gulce is in 3 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+aras is 6. player 
+In 0 square right now.
+It is GO square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 3 sum : 7
+aras is in 7 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+---------------Cycle 2---------------
+
+berre is 1. player 
+In 7 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 5 sum : 6
+berre is in 13 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+melisa is 2. player 
+In 7 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 6 sum : 8
+melisa is in 15 square now
+It is Tax square
+melisa loses -$200.0 for tax
+Total money is : 0.0
+ ------------------------------
+aybars is 3. player 
+In 8 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 6 sum : 12
+aybars is in 20 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+aybars is 3. player 
+In 20 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 1 sum : 7
+aybars is in 27 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+evrim is 4. player 
+In 11 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 1 sum : 5
+evrim is in 16 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+gulce is 5. player 
+In 3 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 3 sum : 7
+gulce is in 10 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+aras is 6. player 
+In 7 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 5 sum : 7
+aras is in 14 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+melisa LOST THE GAME !!!
+---------------Cycle 3---------------
+
+berre is 1. player 
+In 13 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 3 sum : 5
+berre is in 18 square now
+It is Tax square
+berre loses -$400.0 for tax
+Total money is : 0.0
+ ------------------------------
+aybars is 2. player 
+In 27 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 2 sum : 5
+aybars is in 32 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+evrim is 3. player 
+In 16 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 6 sum : 7
+evrim is in 23 square now
+It is Tax square
+evrim loses -$100.0 for tax
+Total money is : 100.0
+ ------------------------------
+gulce is 4. player 
+In 10 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 5 sum : 10
+gulce is in 20 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+gulce is 4. player 
+In 20 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 3 sum : 9
+gulce is in 29 square now
+It is Tax square
+gulce loses -$500.0 for tax
+Total money is : 0.0
+ ------------------------------
+aras is 5. player 
+In 14 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 1 sum : 7
+aras is in 21 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+berre LOST THE GAME !!!
+gulce LOST THE GAME !!!
+---------------Cycle 4---------------
+
+aybars is 1. player 
+In 32 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+aybars has past the start and won 200$
+Die 1 : 5 Die 2 : 6 sum : 11
+aybars is in 4 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+evrim is 2. player 
+In 23 square right now.
+It is Tax square
+Has 100.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 3 sum : 8
+evrim is in 31 square now
+It is Other square
+Total money is : 100.0
+ ------------------------------
+aras is 3. player 
+In 21 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 5 sum : 9
+aras is in 30 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+---------------Cycle 5---------------
+
+aybars is 1. player 
+In 4 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 4 sum : 8
+aybars is in 12 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+aybars is 1. player 
+In 12 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 3 sum : 4
+aybars is in 16 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+evrim is 2. player 
+In 31 square right now.
+It is Other square
+Has 100.0$
+   --------------
+After rolling dice
+evrim has past the start and won 200$
+Die 1 : 4 Die 2 : 5 sum : 9
+evrim is in 1 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+aras is 3. player 
+In 30 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+aras has past the start and won 200$
+Die 1 : 4 Die 2 : 5 sum : 9
+aras is in 0 square now
+It is GO square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 6---------------
+
+aybars is 1. player 
+In 16 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 3 sum : 9
+aybars is in 25 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+evrim is 2. player 
+In 1 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 3 sum : 4
+evrim is in 5 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+aras is 3. player 
+In 0 square right now.
+It is GO square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 1 sum : 3
+aras is in 3 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 7---------------
+
+aybars is 1. player 
+In 25 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 4 sum : 9
+aybars is in 34 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+evrim is 2. player 
+In 5 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 3 sum : 6
+evrim is in 11 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+evrim is 2. player 
+In 11 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 1 sum : 4
+evrim is in 15 square now
+It is Tax square
+evrim loses -$200.0 for tax
+Total money is : 100.0
+ ------------------------------
+aras is 3. player 
+In 3 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 4 sum : 9
+aras is in 12 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 8---------------
+
+aybars is 1. player 
+In 34 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+aybars has past the start and won 200$
+Die 1 : 6 Die 2 : 3 sum : 9
+aybars is in 4 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+evrim is 2. player 
+In 15 square right now.
+It is Tax square
+Has 100.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 5 sum : 9
+evrim is in 24 square now
+It is Other square
+Total money is : 100.0
+ ------------------------------
+aras is 3. player 
+In 12 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 1 sum : 5
+aras is in 17 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 9---------------
+
+aybars is 1. player 
+In 4 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 4 sum : 5
+aybars is in 9 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+evrim is 2. player 
+In 24 square right now.
+It is Other square
+Has 100.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 4 sum : 9
+evrim is in 33 square now
+It is Other square
+Total money is : 100.0
+ ------------------------------
+aras is 3. player 
+In 17 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 1 sum : 4
+aras is in 21 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 10---------------
+
+aybars is 1. player 
+In 9 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 2 sum : 6
+aybars is in 15 square now
+It is Tax square
+aybars loses -$200.0 for tax
+Total money is : 400.0
+ ------------------------------
+evrim is 2. player 
+In 33 square right now.
+It is Other square
+Has 100.0$
+   --------------
+After rolling dice
+evrim has past the start and won 200$
+Die 1 : 2 Die 2 : 4 sum : 6
+evrim is in 0 square now
+It is GO square
+Total money is : 300.0
+ ------------------------------
+aras is 3. player 
+In 21 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 4 sum : 6
+aras is in 27 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 11---------------
+
+aybars is 1. player 
+In 15 square right now.
+It is Tax square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 4 sum : 7
+aybars is in 22 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+evrim is 2. player 
+In 0 square right now.
+It is GO square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 4 sum : 8
+evrim is in 8 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+evrim is 2. player 
+In 8 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 3 sum : 4
+evrim is in 12 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+aras is 3. player 
+In 27 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 6 sum : 11
+aras is in 38 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 12---------------
+
+aybars is 1. player 
+In 22 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 4 sum : 8
+aybars is in 30 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+aybars is 1. player 
+In 30 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 6 sum : 8
+aybars is in 38 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+evrim is 2. player 
+In 12 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 5 sum : 6
+evrim is in 18 square now
+It is Tax square
+evrim loses -$400.0 for tax
+Total money is : 0.0
+ ------------------------------
+aras is 3. player 
+In 38 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+aras has past the start and won 200$
+Die 1 : 4 Die 2 : 1 sum : 5
+aras is in 4 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+evrim LOST THE GAME !!!
+---------------Cycle 13---------------
+
+aybars is 1. player 
+In 38 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+aybars has past the start and won 200$
+Die 1 : 1 Die 2 : 5 sum : 6
+aybars is in 5 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+aras is 2. player 
+In 4 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 2 sum : 5
+aras is in 9 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+---------------Cycle 14---------------
+
+aybars is 1. player 
+In 5 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 6 sum : 7
+aybars is in 12 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+aras is 2. player 
+In 9 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 3 sum : 6
+aras is in 15 square now
+It is Tax square
+aras loses -$200.0 for tax
+Total money is : 400.0
+ ------------------------------
+aras is 2. player 
+In 15 square right now.
+It is Tax square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 4 sum : 7
+aras is in 22 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 15---------------
+
+aybars is 1. player 
+In 12 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 3 sum : 7
+aybars is in 19 square now
+It is Tax square
+aybars loses -$300.0 for tax
+Total money is : 300.0
+ ------------------------------
+aras is 2. player 
+In 22 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 1 sum : 3
+aras is in 25 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 16---------------
+
+aybars is 1. player 
+In 19 square right now.
+It is Tax square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 4 sum : 5
+aybars is in 24 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+aras is 2. player 
+In 25 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 4 sum : 9
+aras is in 34 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 17---------------
+
+aybars is 1. player 
+In 24 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 3 sum : 6
+aybars is in 30 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+aybars is 1. player 
+In 30 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 1 sum : 5
+aybars is in 35 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+aras is 2. player 
+In 34 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+aras has past the start and won 200$
+Die 1 : 6 Die 2 : 1 sum : 7
+aras is in 2 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+---------------Cycle 18---------------
+
+aybars is 1. player 
+In 35 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+aybars has past the start and won 200$
+Die 1 : 1 Die 2 : 5 sum : 6
+aybars is in 2 square now
+It is Other square
+Total money is : 500.0
+ ------------------------------
+aras is 2. player 
+In 2 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 3 sum : 4
+aras is in 6 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+---------------Cycle 19---------------
+
+aybars is 1. player 
+In 2 square right now.
+It is Other square
+Has 500.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 5 sum : 11
+aybars is in 13 square now
+It is Other square
+Total money is : 500.0
+ ------------------------------
+aras is 2. player 
+In 6 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 1 sum : 7
+aras is in 13 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+---------------Cycle 20---------------
+
+aybars is 1. player 
+In 13 square right now.
+It is Other square
+Has 500.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 2 sum : 6
+aybars is in 19 square now
+It is Tax square
+aybars loses -$300.0 for tax
+Total money is : 200.0
+ ------------------------------
+aras is 2. player 
+In 13 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 3 sum : 5
+aras is in 18 square now
+It is Tax square
+aras loses -$400.0 for tax
+Total money is : 200.0
+ ------------------------------
+---------------Cycle 21---------------
+
+aybars is 1. player 
+In 19 square right now.
+It is Tax square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 2 sum : 8
+aybars is in 27 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+aras is 2. player 
+In 18 square right now.
+It is Tax square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 4 sum : 10
+aras is in 28 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+---------------Cycle 22---------------
+
+aybars is 1. player 
+In 27 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 5 sum : 7
+aybars is in 34 square now
+It is Other square
+Total money is : 200.0
+ ------------------------------
+aras is 2. player 
+In 28 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+aras has past the start and won 200$
+Die 1 : 6 Die 2 : 5 sum : 11
+aras is in 0 square now
+It is GO square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 23---------------
+
+aybars is 1. player 
+In 34 square right now.
+It is Other square
+Has 200.0$
+   --------------
+After rolling dice
+aybars has past the start and won 200$
+Die 1 : 3 Die 2 : 3 sum : 6
+aybars is in 1 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+aybars is 1. player 
+In 1 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 4 sum : 7
+aybars is in 8 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+aras is 2. player 
+In 0 square right now.
+It is GO square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 6 sum : 9
+aras is in 9 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 24---------------
+
+aybars is 1. player 
+In 8 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 1 sum : 4
+aybars is in 12 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+aras is 2. player 
+In 9 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 1 sum : 5
+aras is in 14 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 25---------------
+
+aybars is 1. player 
+In 12 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 6 Die 2 : 5 sum : 11
+aybars is in 23 square now
+It is Tax square
+aybars loses -$100.0 for tax
+Total money is : 300.0
+ ------------------------------
+aras is 2. player 
+In 14 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 3 sum : 6
+aras is in 20 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+aras is 2. player 
+In 20 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 3 Die 2 : 5 sum : 8
+aras is in 28 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 26---------------
+
+aybars is 1. player 
+In 23 square right now.
+It is Tax square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 5 sum : 9
+aybars is in 32 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+aras is 2. player 
+In 28 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 4 sum : 6
+aras is in 34 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 27---------------
+
+aybars is 1. player 
+In 32 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 3 sum : 4
+aybars is in 36 square now
+It is Other square
+Total money is : 300.0
+ ------------------------------
+aras is 2. player 
+In 34 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 2 sum : 4
+aras is in 38 square now
+It is Other square
+Total money is : 400.0
+ ------------------------------
+aras is 2. player 
+In 38 square right now.
+It is Other square
+Has 400.0$
+   --------------
+After rolling dice
+aras has past the start and won 200$
+Die 1 : 5 Die 2 : 1 sum : 6
+aras is in 5 square now
+It is Other square
+Total money is : 600.0
+ ------------------------------
+---------------Cycle 28---------------
+
+aybars is 1. player 
+In 36 square right now.
+It is Other square
+Has 300.0$
+   --------------
+After rolling dice
+aybars has past the start and won 200$
+Die 1 : 4 Die 2 : 4 sum : 8
+aybars is in 5 square now
+It is Other square
+Total money is : 500.0
+ ------------------------------
+aybars is 1. player 
+In 5 square right now.
+It is Other square
+Has 500.0$
+   --------------
+After rolling dice
+Die 1 : 5 Die 2 : 2 sum : 7
+aybars is in 12 square now
+It is Other square
+Total money is : 500.0
+ ------------------------------
+aras is 2. player 
+In 5 square right now.
+It is Other square
+Has 600.0$
+   --------------
+After rolling dice
+Die 1 : 4 Die 2 : 6 sum : 10
+aras is in 15 square now
+It is Tax square
+aras loses -$200.0 for tax
+Total money is : 400.0
+ ------------------------------
+---------------Cycle 29---------------
+
+aybars is 1. player 
+In 12 square right now.
+It is Other square
+Has 500.0$
+   --------------
+After rolling dice
+Die 1 : 2 Die 2 : 5 sum : 7
+aybars is in 19 square now
+It is Tax square
+aybars loses -$300.0 for tax
+Total money is : 200.0
+ ------------------------------
+aras is 2. player 
+In 15 square right now.
+It is Tax square
+Has 400.0$
+   --------------
+After rolling dice
+Die 1 : 1 Die 2 : 2 sum : 3
+aras is in 18 square now
+It is Tax square
+aras loses -$400.0 for tax
+Total money is : 0.0
+ ------------------------------
+aras LOST THE GAME !!!
+---------------Game Over-------------
+*********aybars IS WINNER **********
