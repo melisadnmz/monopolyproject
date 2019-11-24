@@ -4,9 +4,8 @@ public class TaxSquare extends Square {
     }
 
     @Override
-    public void play() {
-
+    public void play(Player player){
+            player.getMoney().decreaseAmount(getFee());
+            System.out.println( player.getName() + " loses -$" + getFee() + " for tax");
     }
-
-
 }
