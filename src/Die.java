@@ -1,9 +1,9 @@
-import org.jetbrains.annotations.Contract;
+
 
 public class Die {
     private int faceValue;
 
-    @Contract(pure = true)
+
     public Die() {
         this.faceValue = faceValue;
     }
