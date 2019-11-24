@@ -2,31 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="674d3131-5923-4254-8f31-3921ecf147ff" name="Default Changelist" comment="Square, Board and Money Classes are added">
-      <change afterPath="$PROJECT_DIR$/src/ChanceSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CitySquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CommunityChestSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CorporationSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JailSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OtherSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StationsSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TaxSquare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SquareList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SquareList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/SquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SquareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopolyproject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/monopolyproject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/ChanceSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/ChanceSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/CitySquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/CitySquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/CommunityChestSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/CommunityChestSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/CorporationSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/CorporationSquare.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Die.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Die.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/JailSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/JailSquare.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Money.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Money.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Monopoly.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Monopoly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/OtherSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/OtherSquare.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Piece.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Square.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/monopolyproject/SquareTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/StationsSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/StationsSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/TaxSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/TaxSquare.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChanceSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChanceSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CitySquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CitySquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommunityChestSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommunityChestSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CorporationSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CorporationSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Die.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Die.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JailSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JailSquare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monopoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monopoly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OtherSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OtherSquare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StationsSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StationsSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TaxSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TaxSquare.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,65 +46,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1359#1360#0" expanded="true" />
-                <element signature="e#1389#1390#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JailSquare.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#116#117#0" expanded="true" />
-                <element signature="e#158#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChanceSquare.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="12" />
-              <folding>
-                <element signature="e#143#144#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CommunityChestSquare.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
-              <folding>
-                <element signature="e#150#151#0" expanded="true" />
-                <element signature="e#192#193#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -105,30 +59,90 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SquareList.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+            <state relative-caret-position="272">
+              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OtherSquare.java">
+        <entry file="file://$PROJECT_DIR$/src/Monopoly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="1035">
+              <caret line="213" selection-start-line="213" selection-end-line="213" />
               <folding>
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#164#165#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Square.java">
+        <entry file="file://$PROJECT_DIR$/src/TaxSquare.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ChanceSquare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2914#2915#0" expanded="true" />
+                <element signature="e#2944#2945#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CorporationSquare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JailSquare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StationsSquare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OtherSquare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -150,6 +164,15 @@
       <find>Chance-</find>
       <find>Community Chest-</find>
       <find>Other</find>
+      <find>14</find>
+      <find>16</find>
+      <find>9</find>
+      <find>9 square</find>
+      <find>9 square</find>
+      <find>ev alındıı</find>
+      <find>6 square</find>
+      <find>6 square</find>
+      <find>ece is in 24 square now</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,31 +188,32 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Die.java" />
         <option value="$PROJECT_DIR$/src/Money.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
-        <option value="$PROJECT_DIR$/src/Monopoly.java" />
+        <option value="$PROJECT_DIR$/src/CardsSquare.java" />
+        <option value="$PROJECT_DIR$/Tests/SquareTest.java" />
+        <option value="$PROJECT_DIR$/SquareList.txt" />
         <option value="$PROJECT_DIR$/src/Square.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Die.java" />
+        <option value="$PROJECT_DIR$/src/TaxSquare.java" />
+        <option value="$PROJECT_DIR$/src/CitySquare.java" />
         <option value="$PROJECT_DIR$/src/CorporationSquare.java" />
         <option value="$PROJECT_DIR$/src/StationsSquare.java" />
-        <option value="$PROJECT_DIR$/src/TaxSquare.java" />
-        <option value="$PROJECT_DIR$/src/CardsSquare.java" />
-        <option value="$PROJECT_DIR$/src/CitySquare.java" />
-        <option value="$PROJECT_DIR$/src/ChanceSquare.java" />
         <option value="$PROJECT_DIR$/src/CommunityChestSquare.java" />
-        <option value="$PROJECT_DIR$/src/OtherSquare.java" />
-        <option value="$PROJECT_DIR$/Tests/SquareTest.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/JailSquare.java" />
-        <option value="$PROJECT_DIR$/SquareList.txt" />
+        <option value="$PROJECT_DIR$/src/ChanceSquare.java" />
         <option value="$PROJECT_DIR$/src/Board.java" />
+        <option value="$PROJECT_DIR$/src/Monopoly.java" />
+        <option value="$PROJECT_DIR$/src/OtherSquare.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="719" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-15" />
+    <option name="y" value="-33" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -207,19 +231,20 @@
             <path>
               <item name="monopolyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="monopolyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="monopolyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="monopolyproject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="1a9f42e2:ClassTreeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,7 +256,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573046361903" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -299,6 +325,7 @@
       <workItem from="1572852152483" duration="9020000" />
       <workItem from="1573097750721" duration="1053000" />
       <workItem from="1574509324492" duration="7963000" />
+      <workItem from="1574582981048" duration="8722000" />
     </task>
     <task id="LOCAL-00001" summary="Square, Board and Money Classes are added">
       <created>1572600443438</created>
@@ -323,32 +350,41 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52060000" />
+    <option name="totallyTimeSpent" value="69092000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21647818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13959731" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Sequence" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45753425" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7818697" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.09206799" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329235" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4178082" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.62181306" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.5109589" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.33994335" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.43579236" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -434,103 +470,7 @@
         <state relative-caret-position="-2154" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Die.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Monopoly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="87" column="57" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CorporationSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="e#120#121#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TaxSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#171#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StationsSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" />
-          <folding>
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardsSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#106#107#0" expanded="true" />
-            <element signature="e#151#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CitySquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#112#113#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CommunityChestSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardsSquare.java" />
     <entry file="file://$PROJECT_DIR$/Tests/SquareTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -538,62 +478,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OtherSquare.java">
+    <entry file="file://$PROJECT_DIR$/src/Square.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="493">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding>
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#164#165#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Die.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CitySquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ChanceSquare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" />
+        <state relative-caret-position="102">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
           <folding>
-            <element signature="e#143#144#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2914#2915#0" expanded="true" />
+            <element signature="e#2944#2945#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorporationSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JailSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StationsSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TaxSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommunityChestSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monopoly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="213" selection-start-line="213" selection-end-line="213" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SquareList.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        <state relative-caret-position="272">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/OtherSquare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JailSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#116#117#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1389#1390#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -636,6 +636,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

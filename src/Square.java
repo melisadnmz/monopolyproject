@@ -5,8 +5,10 @@ public abstract class Square extends Board{
     private String name = "";
     private String type = "";
     private int index = 0;
-    private String owner;
+    private Player owner;
     private double fee = 0.0;
+
+    public Square(){}
 
 
     public Square(String name,String type, int index, double fee) {
@@ -48,14 +50,14 @@ public abstract class Square extends Board{
         return fee;
     }
 
-    public void setOwner(String owner){
+    public void setOwner(Player owner) {
         this.owner = owner;
     }
 
-    public String getOwner(){
+    public Player getOwner(){
         return owner;
     }
 
-    public abstract void play();
+    public abstract void play(Player player);
 
 }

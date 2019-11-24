@@ -57,8 +57,9 @@ public class Monopoly {
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
         numOfPlayer = numberOfPlayers();
         String[] nameOfPlayers = playerNames(numOfPlayer);
-        board.crSquare();
-        board.locationOfTax();
+        //board.crSquare();
+        board.createSquare();
+        //board.locationOfTax();
         ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer,board);
         decideTurn();
 
@@ -84,19 +85,18 @@ public class Monopoly {
                     dcounter=0;
                 }
                 setCurrentIndex(players.get(i).getSquareNum());
+                players.get(i).setDice(dice);
                 newLocation = dice + currentIndex;
+
                 System.out.println("After rolling dice");
-                if ((newLocation) >= 39){
+                if ((newLocation) > 39){
                     newLocation -= 39;
-                    players.get(i).getMoney().increaseAmount(200);
-                    System.out.println(players.get(i).getName() + " has past the start and won 200$");
-                    //başlangıctan gecti para alacak
+                    board.getSquare()[0].play(players.get(i));
                 }
                 players.get(i).setSquareNum(board.getSquare()[newLocation].getIndex());
 
-
                 System.out.println(toStringAfter(players.get(i),board));
-                organizeTaxSquare(players.get(i),board);
+                board.getSquare()[newLocation].play(players.get(i));
                 System.out.println(toStringMoney(players.get(i)));
 
                 if(players.get(i).getMoney().getAmount() <= 0){
@@ -210,13 +210,6 @@ public class Monopoly {
         for (int i=0;i<names.length;i++)
             if(name.toLowerCase().equals(names[i])) return false;
         return true;
-    }
-
-    private void organizeTaxSquare(Player player, Board board){
-        if(board.getSquare()[player.getSquareNum()].getType().equals("Tax")){
-            player.getMoney().decreaseAmount((board.getSquare()[player.getSquareNum()].getFee()));
-            System.out.println( player.getName() + " loses -$" + board.getSquare()[player.getSquareNum()].getFee() + " for tax");
-        }
     }
 
     public void decideTurn(){
