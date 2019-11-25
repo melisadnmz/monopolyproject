@@ -4,8 +4,10 @@ public class Player extends Monopoly {
         private int squareNum;
         private Money money;
         private int turn;
+        private int jailNum = 0;
         private Piece piece;
         private boolean lost;
+        private boolean jail;
 
      public Player() {
 
@@ -18,6 +20,7 @@ public class Player extends Monopoly {
             this.turn = turn;
             this.piece = piece;
      }
+
 
         public String getName() {
             return name;
@@ -56,4 +59,16 @@ public class Player extends Monopoly {
         public boolean isLost() { return lost; }
 
         public void setLost(boolean lost) { this.lost = lost; }
+
+        public boolean isJail() {return jail; }
+
+        public void setJail(boolean jail) { this.jail = jail; }
+
+    public int getJailNum() {
+        return jailNum;
+    }
+
+    public void setJailNum(int jailNum) {
+        this.jailNum = jailNum ;
+    }
 }
