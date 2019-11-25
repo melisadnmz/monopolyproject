@@ -58,14 +58,6 @@ public abstract class Square extends Board{
         return owner;
     }
 
-    public void LosingSquares(Player player){
-        for (int i = 0; i < getSquare().length; i++) {
-            if (getOwner() == player){
-                setOwner(null);
-            }
-        }
-    }
-
     public abstract void play(Player player);
 
 }
