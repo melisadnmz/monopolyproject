@@ -126,6 +126,7 @@ public class Monopoly {
                 for(int i = 0; i < numOfPlayer; i++){
                     if(players.get(i).isLost()){
                         numOfLost ++;
+                        board.getSquare()[i].LosingSquares(players.get(i));
                         if(numOfLost == numOfPlayer){
                             defeated = true;
                             System.out.println("---------------Game Over-------------\n*********" + players.get(i).getName() + " IS WINNER **********");
