@@ -13,7 +13,6 @@ public class Monopoly {
     private boolean lost =false;
     private ArrayList<Player> players = new ArrayList<>();
 
-
     public Monopoly() {
     }
 
@@ -49,11 +48,10 @@ public class Monopoly {
         this.players = players;
     }
 
-
     public void startGame() {
         Board board = new Board();
-        int numOfLost = 0;
         boolean defeated = false;
+        int numOfLost = 0;
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
         numOfPlayer = numberOfPlayers();
         String[] nameOfPlayers = playerNames(numOfPlayer);
@@ -114,6 +112,7 @@ public class Monopoly {
                 for(int i = 0; i < numOfPlayer; i++){
                     if(players.get(i).isLost()){
                         numOfLost ++;
+                        board.getSquare()[i].LosingSquares(players.get(i));
                         if(numOfLost == numOfPlayer){
                             defeated = true;
                             System.out.println("---------------Game Over-------------\n*********" + players.get(i).getName() + " IS WINNER **********");
@@ -134,6 +133,7 @@ public class Monopoly {
         return player.getName() + " is " + player.getTurn() +  ". player \nIn " + player.getSquareNum() + " square right now.\n" +
                 "It is "+ board.getSquare()[player.getSquareNum()].getType() +" square\nHas "+ player.getMoney().getAmount()+"$\n   --------------" ;
     }
+
     public String toStringAfter(Player player, Board board) {
         return "Die 1 : " + die1.getValue() + " Die 2 : " + die2.getValue() + " sum : "+ dice + "\n" + player.getName() + " is in " +
                 player.getSquareNum() + " square now\nIt is "+ board.getSquare()[player.getSquareNum()].getType() +" square" ;
@@ -157,8 +157,6 @@ public class Monopoly {
         }
         lost =false;
     }
-
-
 
     public ArrayList<Player> createPlayers(String[] names, int number, Board board){
         Money intMoney = new Money();
