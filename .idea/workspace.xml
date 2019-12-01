@@ -2,11 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="674d3131-5923-4254-8f31-3921ecf147ff" name="Default Changelist" comment="Square, Board and Money Classes are added">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/SquareList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SquareList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/ChanceSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/ChanceSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/CitySquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/CitySquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/CommunityChestSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/CommunityChestSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/CorporationSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/CorporationSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Die.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Die.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/JailSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/JailSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/Monopoly.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/Monopoly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/OtherSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/OtherSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/StationsSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/StationsSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/monopolyproject/TaxSquare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/monopolyproject/TaxSquare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/src/ChanceSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChanceSquare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommunityChestSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommunityChestSquare.java" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/Monopoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monopoly.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/CorporationSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CorporationSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JailSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JailSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OtherSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OtherSquare.java" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/src/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Square.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,6 +43,7 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Square.java">
+<<<<<<< Updated upstream
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="413">
               <caret line="67" selection-start-line="67" selection-end-line="67" />
@@ -83,10 +105,25 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="13" selection-start-column="13" selection-end-column="13" />
+=======
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+              <folding>
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1208#1209#0" expanded="true" />
+                <element signature="e#1240#1241#0" expanded="true" />
+                <element signature="e#1268#1269#0" expanded="true" />
+                <element signature="e#1344#1345#0" expanded="true" />
+                <element signature="e#1386#1387#0" expanded="true" />
+                <element signature="e#1420#1421#0" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,11 +138,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CitySquare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="930">
@@ -122,6 +167,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="13" selection-start-column="13" selection-end-column="13" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/CommunityChestSquare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -172,6 +223,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/Square.java" />
         <option value="$PROJECT_DIR$/src/Monopoly.java" />
@@ -183,6 +235,34 @@
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
     <option name="height" value="800" />
+=======
+        <option value="$PROJECT_DIR$/src/Money.java" />
+        <option value="$PROJECT_DIR$/src/Player.java" />
+        <option value="$PROJECT_DIR$/src/CardsSquare.java" />
+        <option value="$PROJECT_DIR$/Tests/SquareTest.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Die.java" />
+        <option value="$PROJECT_DIR$/src/Monopoly.java" />
+        <option value="$PROJECT_DIR$/SquareList.txt" />
+        <option value="$PROJECT_DIR$/src/Square.java" />
+        <option value="$PROJECT_DIR$/src/JailSquare.java" />
+        <option value="$PROJECT_DIR$/src/OtherSquare.java" />
+        <option value="$PROJECT_DIR$/src/CorporationSquare.java" />
+        <option value="$PROJECT_DIR$/src/StationsSquare.java" />
+        <option value="$PROJECT_DIR$/src/ChanceSquare.java" />
+        <option value="$PROJECT_DIR$/src/CommunityChestSquare.java" />
+        <option value="$PROJECT_DIR$/src/TaxSquare.java" />
+        <option value="$PROJECT_DIR$/src/Board.java" />
+        <option value="$PROJECT_DIR$/src/CitySquare.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1048" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectId" id="1U47BhxI2CFRN8j6Yemtxdzmhht" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -294,8 +374,16 @@
       <workItem from="1573097750721" duration="1053000" />
       <workItem from="1574509324492" duration="7963000" />
       <workItem from="1574582981048" duration="8722000" />
+<<<<<<< Updated upstream
       <workItem from="1574603880940" duration="4079000" />
       <workItem from="1574609113551" duration="2474000" />
+=======
+      <workItem from="1574710561823" duration="251000" />
+      <workItem from="1574780820391" duration="26000" />
+      <workItem from="1574841147766" duration="2569000" />
+      <workItem from="1574965201067" duration="565000" />
+      <workItem from="1575215064376" duration="1604000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Square, Board and Money Classes are added">
       <created>1572600443438</created>
@@ -320,7 +408,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="3193000" />
+=======
+    <option name="totallyTimeSpent" value="75985000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,6 +427,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< Updated upstream
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
@@ -359,6 +452,33 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15167785" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45042494" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.09206799" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329235" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.5028329" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.33994335" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.43579236" />
+      <window_info anchor="bottom" id="Sequence" order="13" />
+      <window_info anchor="right" id="SciView" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+>>>>>>> Stashed changes
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -518,6 +638,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6150">
@@ -529,6 +650,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#2810#2811#0" expanded="true" />
           </folding>
@@ -549,15 +676,23 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
           <caret line="187" selection-start-line="187" selection-end-line="187" />
+=======
+    <entry file="file://$PROJECT_DIR$/SquareList.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JailSquare.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state>
           <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
@@ -590,13 +725,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+=======
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CommunityChestSquare.java">
+    <entry file="file://$PROJECT_DIR$/src/CorporationSquare.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StationsSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChanceSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TaxSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="160" selection-start-line="47" selection-start-column="160" selection-end-line="47" selection-end-column="160" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OtherSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="413">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
+=======
+        <state relative-caret-position="34">
+          <caret line="2" column="95" selection-start-line="2" selection-start-column="95" selection-end-line="2" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Monopoly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1580">
+          <caret line="213" selection-start-line="213" selection-end-line="213" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#133#134#0" expanded="true" />
             <element signature="e#178#179#0" expanded="true" />
@@ -604,10 +793,40 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/ChanceSquare.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+          <folding>
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1240#1241#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommunityChestSquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CitySquare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
