@@ -1,7 +1,7 @@
 public class CitySquare extends Square {
 
-    public CitySquare(String name, String type, int index, double fee) {
-        super(name,type,index,fee);
+    public CitySquare(String name, String type, int index, double fee, double rent, String color) {
+        super(name,type,index,fee,rent,color);
     }
 
     @Override
@@ -13,7 +13,7 @@ public class CitySquare extends Square {
             System.out.println("noluyor get owner null degıl");
             if(! (getOwner() == player)){
                 System.out.println("getowner ben degılım");
-                double rent = getFee(); // verilecek kira bedeli
+                double rent = getRent(); // verilecek kira bedeli
                 player.getMoney().decreaseAmount(rent);
                 getOwner().getMoney().increaseAmount(rent);
             }
@@ -23,9 +23,9 @@ public class CitySquare extends Square {
         else{
             System.out.println("ıcerdeyımm");
             if(faceV > 8){
-                if(player.getMoney().getAmount() >= getFee()){
+                if(player.getMoney().getAmount() >= getRent()){
                     setOwner(player);
-                    player.getMoney().decreaseAmount(getFee());
+                    player.getMoney().decreaseAmount(getRent());
                     System.out.println("ev alındıı");
                 }else{
 

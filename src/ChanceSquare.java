@@ -1,7 +1,7 @@
 public class ChanceSquare extends Square {
 
-    public ChanceSquare(String name, String type, int index, double fee) {
-        super(name,type,index,fee);
+    public ChanceSquare(String name, String type, int index, double fee, double rent, String color) {
+        super(name,type,index,fee,rent,color);
     }
 
     @Override
