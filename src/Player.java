@@ -64,11 +64,11 @@ public class Player extends Monopoly {
 
         public void setJail(boolean jail) { this.jail = jail; }
 
-    public int getJailNum() {
+        public int getJailNum() {
         return jailNum;
     }
 
-    public void setJailNum(int jailNum) {
+        public void setJailNum(int jailNum) {
         this.jailNum = jailNum ;
     }
 }

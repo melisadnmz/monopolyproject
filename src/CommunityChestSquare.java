@@ -21,7 +21,7 @@ public class CommunityChestSquare extends Square {
 
             case 3:
                 player.getMoney().increaseAmount(player.getPlayers().size() * 20);
-                System.out.println(player.getName() + " Pay 20 times the number of players!");
+                System.out.println(player.getName() + " pay 20 times the number of players!");
                 break;
 
 

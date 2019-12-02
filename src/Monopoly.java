@@ -57,9 +57,9 @@ public class Monopoly {
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
         numOfPlayer = numberOfPlayers();
         String[] nameOfPlayers = playerNames(numOfPlayer);
-        //board.crSquare();
         board.createSquare();
-        //board.locationOfTax();
+        board.locationOfTax();
+        board.locationOfJail();
         ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer,board);
         decideTurn();
 
@@ -83,8 +83,7 @@ public class Monopoly {
                         continue;
                     }
 
-                }
-                if(d1 == d2){
+                } else if(d1 == d2){
                     dcounter++;
                     if(dcounter==3) {
                         dcounter=0;
@@ -145,18 +144,19 @@ public class Monopoly {
 
     public String toStringBefore(Player player , Board board) {
         return player.getName() + " is " + player.getTurn() +  ". player \nIn " + player.getSquareNum() + " square right now.\n" +
-                "It is "+ board.getSquare()[player.getSquareNum()].getType() +" square\nHas "+ player.getMoney().getAmount()+"$\n   --------------" ;
+                "It is "+ board.getSquare()[player.getSquareNum()].getName() + "(" + board.getSquare()[player.getSquareNum()].getType() +" square)\nHas "+ player.getMoney().getAmount()+"$\n   --------------" ;
     }
     public String toStringAfter() {
         return "Die 1 : " + die1.getValue() + " Die 2 : " + die2.getValue() + " sum : "+ dice   ;
     }
 
     public String toStringMoney(Player player , Board board) {
-        return  player.getName() + " is in " + player.getSquareNum() + " square now\nIt is "+ board.getSquare()[player.getSquareNum()].getType() +" square"+
+        return  player.getName() + " is in " + player.getSquareNum() + " square now\nIt is "+  board.getSquare()[player.getSquareNum()].getName() + "(" + board.getSquare()[player.getSquareNum()].getType() +" square)"+
                 "\nTotal money is : " + player.getMoney().getAmount() + "\n"+"\n ------------------------------";
     }
 
     public void changeTurn(int number){
+
         for(int i = players.size()-1; i >= 0; i--){
            if(players.get(i).isLost()){
                players.remove(players.get(i));
@@ -174,6 +174,7 @@ public class Monopoly {
 
 
     public ArrayList<Player> createPlayers(String[] names, int number, Board board){
+
         Money intMoney = new Money();
         intMoney.initialMoney();
         for(int i=0;i<number;i++){
@@ -189,6 +190,7 @@ public class Monopoly {
     }
 
     public int numberOfPlayers() {
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter number of players(Number of players must be between 2 and 8): ");
         int numberOfPlayers = scanner.nextInt();
@@ -201,6 +203,7 @@ public class Monopoly {
     }
 
     public String[] playerNames(int numberOfPlayers){
+
         Scanner scanner = new Scanner(System.in);
         String[] playerNames = new String[numberOfPlayers];
         int num=1;
@@ -226,6 +229,7 @@ public class Monopoly {
     }
 
     public void decideTurn(){
+
         ArrayList<Player> temp = new ArrayList<Player>();
         System.out.println();
         System.out.println("Players are rolling dice for decide turns.");
@@ -299,7 +303,6 @@ public class Monopoly {
             if( (d1 == d2) ){
                 player.setJail(false);
                 player.setJailNum(0);
-
             }
         }
         return false;

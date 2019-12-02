@@ -17,7 +17,7 @@ public class ChanceSquare extends Square {
             System.out.println(player.getName() + " you found 70 money congratulations!");
         }else{
             player.getMoney().increaseAmount(player.getPlayers().size()*10);
-            System.out.println(player.getName() + "Pay 10 times the number of players!");
+            System.out.println(player.getName() + " pay 10 times the number of players!");
         }
 
     }
