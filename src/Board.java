@@ -1,8 +1,12 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Board extends Monopoly {
     private Square[] squares = new Square[40];
+    int numOfTax=0;
+    int numOfJail=1;
 
     public Board(){
 
@@ -63,4 +67,67 @@ public class Board extends Monopoly {
     public Square[] getSquare(){
         return squares;
     }
+
+    public void locationOfTax(){
+        numOfTax();
+        for(int i=0;i< squares.length; i++){
+            if (numOfTax==0)
+                break;
+            if(squares[i].getType().equals("Tax") && squares[i].getName().equals("Free")){
+                squares[i].setFee(amountOfTax());
+                squares[i].setName("Tax");
+                numOfTax--;
+            }
+
+        }
+    }
+
+    public void numOfTax(){
+        System.out.print("Please enter number of Tax square: ");
+        Scanner scanner = new Scanner(System.in);
+        numOfTax = scanner.nextInt();
+        while(numOfTax > 4) {
+            System.out.print("Number of Tax square must be below 4. Please enter again: ");
+            numOfTax = scanner.nextInt();
+        }
+        while(numOfJail < 0) {
+            System.out.print("Number of Tax square must be above 0. Please enter again: ");
+            numOfJail = scanner.nextInt();
+        }
+    }
+
+    public double amountOfTax(){
+        System.out.print("Please enter amount for Tax square: ");
+        Scanner scanner = new Scanner(System.in);
+        double inputFee = scanner.nextDouble();
+        return inputFee;
+    }
+
+    public void locationOfJail(){
+        numOfJail();
+        for(int i=0;i< squares.length; i++){
+            if (numOfJail==1)
+                break;
+            if(squares[i].getType().equals("Jail") && squares[i].getName().equals("Free")){
+                squares[i].setName("GoToJail");
+                numOfJail--;
+            }
+
+        }
+    }
+
+    public void numOfJail(){
+        System.out.print("Please enter number of GoToJail square: ");
+        Scanner scanner = new Scanner(System.in);
+        numOfJail = scanner.nextInt();
+        while(numOfJail > 5) {
+            System.out.print("Number of GoToJail square must be below 5. Please enter again: ");
+            numOfJail = scanner.nextInt();
+        }
+        while(numOfJail < 1) {
+            System.out.print("Number of GoToJail square must be above 1. Please enter again: ");
+            numOfJail = scanner.nextInt();
+        }
+    }
+
 }
