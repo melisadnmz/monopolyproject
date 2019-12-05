@@ -64,7 +64,6 @@ public class Monopoly {
         decideTurn();
 
         System.out.println("----------------Game starts---------------\n");
-        System.out.println("----------------Game starts---------------\n");
 
         int d1, d2, dcounter=0;
         while(numOfPlayer>1){
