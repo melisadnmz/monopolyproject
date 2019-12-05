@@ -9,6 +9,7 @@ public class Player extends Monopoly {
         private boolean lost;
         private boolean jail;
 
+
      public Player() {
 
      }
