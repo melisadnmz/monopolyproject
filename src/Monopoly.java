@@ -12,6 +12,7 @@ public class Monopoly {
     private int numOfPlayer;
     private boolean lost =false;
     private ArrayList<Player> players = new ArrayList<>();
+    private ArrayList<Die> diece = new ArrayList<>();
 
 
     public Monopoly() {
@@ -56,11 +57,15 @@ public class Monopoly {
         boolean defeated = false;
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
         numOfPlayer = numberOfPlayers();
+        int numOfDiece = getDieCount();
+        createDiece(numOfDiece);
+
+
         String[] nameOfPlayers = playerNames(numOfPlayer);
         board.createSquare();
         board.locationOfTax();
         board.locationOfJail();
-        ArrayList<Player> players = createPlayers(nameOfPlayers,numOfPlayer,board);
+        createPlayers(nameOfPlayers,numOfPlayer,board);
         decideTurn();
 
         System.out.println("----------------Game starts---------------\n");
@@ -72,18 +77,23 @@ public class Monopoly {
 
             for (int i = 0; i < numOfPlayer; i++) {
                 System.out.println(toStringBefore(players.get(i),board));
-                d1= die1.rollDie();
-                d2=  die2.rollDie();
-                setDice(d1 + d2);
+                //Rolling diece
+                rollDiece();
+
+               /* d1 =  die1.rollDie();
+                d2 =  die2.rollDie();*/
+
+                //setDice(d1 + d2);
                 System.out.println("After rolling dice");
                 System.out.println(toStringAfter());
 
+
                 if( players.get(i).isJail()){
-                    if(jailCase(players.get(i),d1,d2)){
+                    if(jailCase(players.get(i))){
                         continue;
                     }
 
-                } else if(d1 == d2){
+                } else if(DieComp(diece.size()-1)){
                     dcounter++;
                     if(dcounter==3) {
                         dcounter=0;
@@ -102,7 +112,7 @@ public class Monopoly {
                 if ((newLocation) > 39){
                     newLocation -= 39;
                     if(!(board.getSquare()[newLocation].getName().equals("GoToJail")))
-                      board.getSquare()[0].play(players.get(i));
+                        board.getSquare()[0].play(players.get(i));
                 }
                 players.get(i).setSquareNum(board.getSquare()[newLocation].getIndex());
 
@@ -115,7 +125,7 @@ public class Monopoly {
                     lost = true;
                 }
 
-                if(d1 == d2)
+                if(DieComp(diece.size()-1))
                     if(!players.get(i).isLost()) i--;
 
             }
@@ -147,20 +157,27 @@ public class Monopoly {
                 "It is "+ board.getSquare()[player.getSquareNum()].getName() + "(" + board.getSquare()[player.getSquareNum()].getType() +" square)\nHas "+ player.getMoney().getAmount()+"$\n   --------------" ;
     }
     public String toStringAfter() {
-        return "Die 1 : " + die1.getValue() + " Die 2 : " + die2.getValue() + " sum : "+ dice   ;
+        return toDiece() + " sum : "+ dice   ;
     }
 
     public String toStringMoney(Player player , Board board) {
         return  player.getName() + " is in " + player.getSquareNum() + " square now\nIt is "+  board.getSquare()[player.getSquareNum()].getName() + "(" + board.getSquare()[player.getSquareNum()].getType() +" square)"+
                 "\nTotal money is : " + player.getMoney().getAmount() + "\n"+"\n ------------------------------";
     }
+    public String toDiece() {
+        String dieceS ="";
+        for(int i=0;i<diece.size();i++){
+            dieceS += "Die " + i + ": " + diece.get(i).getValue() + "\n";
+        }
+        return dieceS;
+    }
 
     public void changeTurn(int number){
 
         for(int i = players.size()-1; i >= 0; i--){
-           if(players.get(i).isLost()){
-               players.remove(players.get(i));
-           }
+            if(players.get(i).isLost()){
+                players.remove(players.get(i));
+            }
         }
         numOfPlayer =  numOfPlayer - number;
         if(numOfPlayer > 0) {
@@ -187,6 +204,15 @@ public class Monopoly {
             this.players.add(i,person);
         }
         return players;
+    }
+
+    public void createDiece(int number){
+
+        for(int i=0;i<number;i++){
+            Die die = new Die();
+            this.diece.add(i,die);
+        }
+
     }
 
     public int numberOfPlayers() {
@@ -277,9 +303,9 @@ public class Monopoly {
 
     }
 
-    public boolean jailCase(Player player, int d1,int d2){
+    public boolean jailCase(Player player){
         if(player.getJailNum() < 3){
-            if( !(d1 == d2) ){
+            if( !(DieComp(diece.size()-1)) ){
                 System.out.println( player.getName()+" couldn't roll double ");
                 player.setJailNum(player.getJailNum()+1);
                 if(player.getJailNum() == 3){
@@ -300,11 +326,43 @@ public class Monopoly {
                     return true;
                 }
             }
-            if( (d1 == d2) ){
+            if( (DieComp(diece.size()-1)) ){
                 player.setJail(false);
                 player.setJailNum(0);
             }
         }
         return false;
     }
+
+    public int getDieCount(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter number of diece ");
+        int numberOfDiece = scanner.nextInt();
+        return numberOfDiece;
+    }
+
+    public void rollDiece(){
+        dice=0;
+        for(int i=0;i<diece.size();i++){
+            diece.get(i).rollDie();
+            dice+=diece.get(i).getValue();
+        }
+    }
+
+    public boolean DieComp(int i){
+        if(i==0){
+
+            return true;
+        }
+
+        else if(diece.get(i).getValue() == diece.get(i-1).getValue()){
+
+            if(DieComp(i-1))
+                return true;
+
+        }
+
+        return false;
+    }
 }
+
