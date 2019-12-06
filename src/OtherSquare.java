@@ -6,10 +6,11 @@ public class OtherSquare extends Square {
 
     @Override
     public void play(Player player) {
+        if(getName().equals("GO")){
             player.getMoney().increaseAmount(200);
             System.out.println(player.getName() + " has past the start and won 200$");
-            if(getName().equals("Free Parking")){
-                System.out.println("You are in free parking");
-            }
+        }else if(getName().equals("FreeParking")){
+            System.out.println("You are in free parking");
+        }
     }
 }

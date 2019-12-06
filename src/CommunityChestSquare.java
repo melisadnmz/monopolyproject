@@ -11,17 +11,19 @@ public class CommunityChestSquare extends Square {
         switch (i) {
             case 0:
                 player.getMoney().decreaseAmount(60);
-                System.out.println(player.getName() + " you have to pay 60 TL to the bank!");
+                System.out.println(player.getName() + " you have to pay $60 to the bank!");
                 break;
             case 1:
                 player.getMoney().increaseAmount(80);
-                System.out.println(player.getName() + " you found 80 money, congratulations");
+                System.out.println(player.getName() + " you found $80, congratulations");
                 break;
             case 2:
 
             case 3:
-                player.getMoney().increaseAmount(player.getPlayers().size() * 20);
-                System.out.println(player.getName() + " pay 20 times the number of players!");
+                player.getMoney().decreaseAmount(1500);
+                System.out.println(player.getName() + " you have to pay $1500 to the bank!");
+                //player.getMoney().increaseAmount(player.getNumOfPlayer() * 20);
+                //System.out.println(player.getName() + " gain 20 times the number of players!");
                 break;
 
 

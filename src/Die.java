@@ -5,7 +5,6 @@ public class Die {
 
 
     public Die() {
-        this.faceValue = faceValue;
     }
 
     public int rollDie(){

@@ -10,9 +10,9 @@ public class CitySquare extends Square {
         System.out.println(faceV);
         //gelinen city karesi sahipliyse
         if(! (getOwner() == null)){
-            System.out.println("noluyor get owner null degıl");
+            //System.out.println("noluyor get owner null degıl");
             if(! (getOwner() == player)){
-                System.out.println("getowner ben degılım");
+              //  System.out.println("getowner ben degılım");
                 double rent = getRent(); // verilecek kira bedeli
                 player.getMoney().decreaseAmount(rent);
                 getOwner().getMoney().increaseAmount(rent);
@@ -21,12 +21,12 @@ public class CitySquare extends Square {
         }
         //gelinen city karesi sahipli değilse
         else{
-            System.out.println("ıcerdeyımm");
+            //System.out.println("ıcerdeyımm");
             if(faceV > 8){
                 if(player.getMoney().getAmount() >= getRent()){
                     setOwner(player);
                     player.getMoney().decreaseAmount(getRent());
-                    System.out.println("ev alındıı");
+                   // System.out.println("ev alındıı");
                 }else{
 
                 }
