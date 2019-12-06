@@ -17,6 +17,7 @@ public class StationsSquare extends Square {
                     double rent = getRent();
                     player.getMoney().decreaseAmount(rent);
                     getOwner().getMoney().increaseAmount(rent);
+                    System.out.println(player.getName() + " pays the rent "+ rent +"-----> " + getOwner().getName());
                 }
                 if(false){//burada gelinen yerin sahibi  2 stationada sahipse
                     double rent = getRent()*2;
@@ -32,6 +33,7 @@ public class StationsSquare extends Square {
                     double rent = getRent()*4;
                     player.getMoney().decreaseAmount(rent);
                     getOwner().getMoney().increaseAmount(rent);
+
                 }
 
             }
@@ -44,7 +46,7 @@ public class StationsSquare extends Square {
                 if(player.getMoney().getAmount() >= getFee()){
                     setOwner(player);
                     player.getMoney().decreaseAmount(getFee());
-                    System.out.println("ev alindii");
+                    System.out.println(player.getName() + " buys the station with " + getFee());
                 }
             }
         }

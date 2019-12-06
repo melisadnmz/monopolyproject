@@ -63,16 +63,14 @@ public class Monopoly {
         boolean defeated = false;
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
         numberOfPlayers();
-      //  System.out.println("Players are " + numOfPlayer);
-        int numOfDiece = getDieCount();
-        createDiece(numOfDiece);
-
 
         String[] nameOfPlayers = playerNames(numOfPlayer);
         board.createSquare();
         board.locationOfTax();
         board.locationOfJail();
         createPlayers(nameOfPlayers,numOfPlayer,board);
+        int numOfDiece = getDieCount();
+        createDiece(numOfDiece);
         decideTurn();
 
         System.out.println("----------------Game starts---------------\n");
@@ -86,13 +84,9 @@ public class Monopoly {
                 System.out.println(toStringBefore(players.get(i),board));
                 //Rolling diece
                 rollDiece();
-
-               /* d1 =  die1.rollDie();
-                d2 =  die2.rollDie();*/
-
-                //setDice(d1 + d2);
                 System.out.println("After rolling dice");
-                System.out.println(toStringAfter());
+                System.out.println(toDiece());
+
 
 
                 if( players.get(i).isJail()){
@@ -124,8 +118,11 @@ public class Monopoly {
                 players.get(i).setSquareNum(board.getSquare()[newLocation].getIndex());
 
 
+
+                System.out.println(toStringAfter(players.get(i),board));
                 board.getSquare()[newLocation].play(players.get(i));
-                System.out.println(toStringMoney(players.get(i),board));
+                System.out.println(toStringMoney(players.get(i)));
+
 
                 if(players.get(i).getMoney().getAmount() <= 0){
                     players.get(i).setLost(true);
@@ -163,19 +160,21 @@ public class Monopoly {
         return player.getName() + " is " + player.getTurn() +  ". player \nIn " + player.getSquareNum() + " square right now.\n" +
                 "It is "+ board.getSquare()[player.getSquareNum()].getName() + "(" + board.getSquare()[player.getSquareNum()].getType() +" square)\nHas "+ player.getMoney().getAmount()+"$\n   --------------" ;
     }
-    public String toStringAfter() {
-        return toDiece() + " sum : "+ dice   ;
+    public String toStringAfter(Player player , Board board) {
+        return  player.getName() + " is in " + player.getSquareNum() + " square now\nIt is "+
+                board.getSquare()[player.getSquareNum()].getName() + "(" + board.getSquare()[player.getSquareNum()].getType() +" square)" ;
     }
 
-    public String toStringMoney(Player player , Board board) {
-        return  player.getName() + " is in " + player.getSquareNum() + " square now\nIt is "+  board.getSquare()[player.getSquareNum()].getName() + "(" + board.getSquare()[player.getSquareNum()].getType() +" square)"+
-                "\nTotal money is : " + player.getMoney().getAmount() + "\n"+"\n ------------------------------";
+    public String toStringMoney(Player player ) {
+        return
+                "Total money is : " + player.getMoney().getAmount() + "\n"+"\n ------------------------------";
     }
     public String toDiece() {
         String dieceS ="";
         for(int i=0;i<diece.size();i++){
-            dieceS += "Die " + i + ": " + diece.get(i).getValue() + "\n";
+            dieceS += "Die " + (i+1) + ": " + diece.get(i).getValue() + "\n";
         }
+        dieceS += "Sum: " + dice;
         return dieceS;
     }
 
@@ -228,7 +227,7 @@ public class Monopoly {
         System.out.print("Please enter number of players(Number of players must be between 2 and 8): ");
          numOfPlayer = scanner.nextInt();
         //Check the number because of that players must be between 2-8.
-        while(numOfPlayer < 2 || numOfPlayer > 8) {
+        while(numOfPlayer < 2 || numOfPlayer > 8 ) {
             System.out.print("Number of players must be between 2 and 8. Please enter again: ");
             numOfPlayer = scanner.nextInt();
         }
@@ -343,7 +342,7 @@ public class Monopoly {
 
     public int getDieCount(){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter number of diece ");
+        System.out.print("Please enter number of diece: ");
         int numberOfDiece = scanner.nextInt();
         return numberOfDiece;
     }
