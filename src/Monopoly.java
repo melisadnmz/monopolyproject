@@ -18,6 +18,12 @@ public class Monopoly {
     public Monopoly() {
     }
 
+
+    public int getNumOfPlayer() {
+        return numOfPlayer;
+    }
+
+
     public int getCurrentIndex() {
         return currentIndex;
     }
@@ -56,7 +62,8 @@ public class Monopoly {
         int numOfLost = 0;
         boolean defeated = false;
         System.out.println("Welcome Perfecto Monopoly Game Simulation!");
-        numOfPlayer = numberOfPlayers();
+        numberOfPlayers();
+      //  System.out.println("Players are " + numOfPlayer);
         int numOfDiece = getDieCount();
         createDiece(numOfDiece);
 
@@ -70,7 +77,7 @@ public class Monopoly {
 
         System.out.println("----------------Game starts---------------\n");
 
-        int d1, d2, dcounter=0;
+        int  dcounter=0;
         while(numOfPlayer>1){
             numOfLost = 0;
             System.out.println("---------------Cycle " + cycle + "---------------\n");
@@ -219,13 +226,13 @@ public class Monopoly {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter number of players(Number of players must be between 2 and 8): ");
-        int numberOfPlayers = scanner.nextInt();
+         numOfPlayer = scanner.nextInt();
         //Check the number because of that players must be between 2-8.
-        while(numberOfPlayers < 2 || numberOfPlayers > 8) {
+        while(numOfPlayer < 2 || numOfPlayer > 8) {
             System.out.print("Number of players must be between 2 and 8. Please enter again: ");
-            numberOfPlayers = scanner.nextInt();
+            numOfPlayer = scanner.nextInt();
         }
-        return numberOfPlayers;
+        return numOfPlayer;
     }
 
     public String[] playerNames(int numberOfPlayers){
@@ -363,6 +370,14 @@ public class Monopoly {
         }
 
         return false;
+    }
+
+    public void PrintTheBoard(Board board){
+        for (int i = 0; i < board.getSquare().length; i++) {
+            System.out.println(board.getSquare()[i].getName() + "  " + board.getSquare()[i].getType() + " " +
+                    board.getSquare()[i].getFee());
+
+        }
     }
 }
 

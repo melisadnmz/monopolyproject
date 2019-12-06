@@ -22,6 +22,9 @@ public class Player extends Monopoly {
             this.piece = piece;
      }
 
+     public int getNumOfPlayer(){
+         return super.getNumOfPlayer();
+     }
 
         public String getName() {
             return name;
