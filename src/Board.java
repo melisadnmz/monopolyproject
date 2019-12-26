@@ -1,12 +1,14 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Board extends Monopoly {
     private Square[] squares = new Square[40];
     int numOfTax=0;
     int numOfJail=1;
+    double inputFee;
 
     public Board(){
 
@@ -85,21 +87,36 @@ public class Board extends Monopoly {
     public void numOfTax(){
         System.out.print("Please enter number of Tax square: ");
         Scanner scanner = new Scanner(System.in);
-        numOfTax = scanner.nextInt();
-        while(numOfTax > 4) {
-            System.out.print("Number of Tax square must be below 4. Please enter again: ");
+        try{
             numOfTax = scanner.nextInt();
+            while(numOfTax > 4) {
+                System.out.print("Number of Tax square must be below 4. Please enter again: ");
+                numOfTax = scanner.nextInt();
+            }
+            while(numOfTax < 0) {
+                System.out.print("Number of Tax square must be above 0. Please enter again: ");
+                numOfJail = scanner.nextInt();
+            }
+
+        }catch (InputMismatchException hata){
+            System.out.println("please enter valid number - error: " + hata);
+
+
         }
-        while(numOfJail < 0) {
-            System.out.print("Number of Tax square must be above 0. Please enter again: ");
-            numOfJail = scanner.nextInt();
-        }
+
+
     }
 
     public double amountOfTax(){
         System.out.print("Please enter amount for Tax square: ");
         Scanner scanner = new Scanner(System.in);
-        double inputFee = scanner.nextDouble();
+        try{
+             inputFee = scanner.nextDouble();
+        }
+       catch (InputMismatchException hata){
+           System.out.println("please enter valid number - error: " + hata);
+
+       }
         return inputFee;
     }
 
@@ -119,15 +136,20 @@ public class Board extends Monopoly {
     public void numOfJail(){
         System.out.print("Please enter number of GoToJail square: ");
         Scanner scanner = new Scanner(System.in);
-        numOfJail = scanner.nextInt();
-        while(numOfJail > 5) {
-            System.out.print("Number of GoToJail square must be below 5. Please enter again: ");
+        try{
             numOfJail = scanner.nextInt();
+            while(numOfJail > 5) {
+                System.out.print("Number of GoToJail square must be below 5. Please enter again: ");
+                numOfJail = scanner.nextInt();
+            }
+            while(numOfJail < 1) {
+                System.out.print("Number of GoToJail square must be above 1. Please enter again: ");
+                numOfJail = scanner.nextInt();
+            }
+        }catch (ArithmeticException hata){
+            System.out.println("please enter valid number - error: " + hata);
         }
-        while(numOfJail < 1) {
-            System.out.print("Number of GoToJail square must be above 1. Please enter again: ");
-            numOfJail = scanner.nextInt();
+
         }
-    }
 
 }
