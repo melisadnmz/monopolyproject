@@ -72,15 +72,30 @@ public class Board extends Monopoly {
 
     public void locationOfTax(){
         numOfTax();
+        int parking=4-numOfTax;
         for(int i=0;i< squares.length; i++){
             if (numOfTax==0)
                 break;
-            if(squares[i].getType().equals("Tax") && squares[i].getName().equals("Free")){
-                squares[i].setFee(amountOfTax());
-                squares[i].setName("Tax");
+            if(squares[i].getName().equals("Tax") && squares[i].getType().equals("Other")){
+                TaxSquare taxSquare = new TaxSquare("Tax","Tax",squares[i].getIndex(),amountOfTax(),squares[i].getRent(),squares[i].getColor());
+                squares[i] = taxSquare;
                 numOfTax--;
             }
+        }
+        changeToOther(parking,squares,"Tax");
+    }
 
+    public void changeToOther(int num,Square[] squares,String str){
+        //System.out.println("num kadar change " + num + "  " + str);
+        if(num > 0) {
+            for (int i = 0; i < squares.length; i++) {
+                if (num == 0)
+                    break;
+                if (squares[i].getName().equals(str) && squares[i].getType().equals("Other")) {
+                    squares[i].setName("FreeParking");
+                    num--;
+                }
+            }
         }
     }
 
@@ -122,15 +137,17 @@ public class Board extends Monopoly {
 
     public void locationOfJail(){
         numOfJail();
+        int parking=5-numOfJail;
         for(int i=0;i< squares.length; i++){
             if (numOfJail==1)
                 break;
-            if(squares[i].getType().equals("Jail") && squares[i].getName().equals("Free")){
-                squares[i].setName("GoToJail");
+            if(squares[i].getName().equals("Jail") && squares[i].getType().equals("Other")){
+                JailSquare jailSquare = new JailSquare("GoToJail","Jail",squares[i].getIndex(),squares[i].getFee(),squares[i].getRent(),squares[i].getColor());
+                squares[i] = jailSquare;
                 numOfJail--;
             }
-
         }
+        changeToOther(parking,squares,"Jail");
     }
 
     public void numOfJail(){

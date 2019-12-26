@@ -17,6 +17,7 @@ public class CorporationSquare extends Square {
                     double rent = 4 * faceV;
                     player.getMoney().decreaseAmount(rent);
                     getOwner().getMoney().increaseAmount(rent);
+                    System.out.println(player.getName() + " pays the rent "+ rent +"-----> " + getOwner().getName());
                 }
                 if (false) {//burada gelinen yerin sahibi her iki corporationada sahipse
                     double rent = 10 * faceV;
@@ -33,7 +34,7 @@ public class CorporationSquare extends Square {
                 if (player.getMoney().getAmount() >= getFee()) {
                     setOwner(player);
                     player.getMoney().decreaseAmount(getFee());
-                    System.out.println("ev alindii");
+                   System.out.println(player.getName() + " buys the corporation with " + getFee());
                 }
             }
         }
