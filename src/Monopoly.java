@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Monopoly {
@@ -10,6 +11,7 @@ public class Monopoly {
     private int currentIndex;
     private int newLocation;
     private int numOfPlayer;
+    private int numberOfDiece;
     private boolean lost = false;
     private ArrayList<Player> players = new ArrayList<>();
     private ArrayList<Die> diece = new ArrayList<>();
@@ -223,12 +225,17 @@ public class Monopoly {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter number of players(Number of players must be between 2 and 8): ");
-        numOfPlayer = scanner.nextInt();
-        //Check the number because of that players must be between 2-8.
-        while (numOfPlayer < 2 || numOfPlayer > 8) {
-            System.out.print("Number of players must be between 2 and 8. Please enter again: ");
+        try{
             numOfPlayer = scanner.nextInt();
+            //Check the number because of that players must be between 2-8.
+            while (numOfPlayer < 2 || numOfPlayer > 8) {
+                System.out.print("Number of players must be between 2 and 8. Please enter again: ");
+                numOfPlayer = scanner.nextInt();
+            }
+        }catch (InputMismatchException hata){
+            System.out.println("please enter valid number - error: " + hata);
         }
+
         return numOfPlayer;
     }
 
@@ -237,17 +244,24 @@ public class Monopoly {
         Scanner scanner = new Scanner(System.in);
         String[] playerNames = new String[numberOfPlayers];
         int num = 1;
-        while (num <= numberOfPlayers) {
-            System.out.println("Please enter name for " + num + ". Player: ");
-            String name = scanner.nextLine();
-            if (controlForName(name, playerNames))
-                playerNames[num - 1] = name;
-            else {
-                System.out.println("This name is already taken. Please entered again!");
-                num--;
+        try {
+            while (num <= numberOfPlayers) {
+                System.out.println("Please enter name for " + num + ". Player: ");
+                String name = scanner.nextLine();
+                if (controlForName(name, playerNames))
+                    playerNames[num - 1] = name;
+                else {
+                    System.out.println("This name is already taken. Please entered again!");
+                    num--;
+                }
+                num++;
             }
-            num++;
+        }catch (InputMismatchException hata){
+            System.out.println("please enter valid number - error: " + hata);
         }
+
+
+
         return playerNames;
     }
 
@@ -336,7 +350,13 @@ public class Monopoly {
     public int getDieCount() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter number of diece: ");
-        int numberOfDiece = scanner.nextInt();
+
+        try{
+              numberOfDiece = scanner.nextInt();
+
+        }catch (InputMismatchException hata){
+            System.out.println("please enter valid number - error: " + hata);
+        }
         return numberOfDiece;
     }
 

@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Money extends Player {
@@ -28,7 +29,13 @@ public class Money extends Player {
     public void initialMoney(){
         System.out.print("Please enter initial amount for players: ");
         Scanner scanner = new Scanner(System.in);
-        amount= scanner.nextDouble();
-        setAmount(amount);
+        try{
+            amount= scanner.nextDouble();
+            setAmount(amount);
+        }catch (InputMismatchException hata){
+            System.out.println("please enter valid number - error: " + hata);
+        }
+
+
     }
 }
