@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -13,6 +12,7 @@ public class Board extends Monopoly {
     public Board(){
 
     }
+
 
     public void createSquare() { //This method will be use 2nd iteration.
         try{
@@ -64,9 +64,17 @@ public class Board extends Monopoly {
         }catch(Exception e){
             e.printStackTrace();
         }
+
+
+
     }
 
     public Square[] getSquare(){
+        return squares;
+    }
+
+    public Square[] setSquare(Square[] squares){
+        this.squares = squares;
         return squares;
     }
 
@@ -168,5 +176,4 @@ public class Board extends Monopoly {
         }
 
         }
-
 }

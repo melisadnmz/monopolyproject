@@ -1,5 +1,7 @@
 public class CitySquare extends Square {
 
+    private int same = 0;
+
     public CitySquare(String name, String type, int index, double fee, double rent, String color) {
         super(name,type,index,fee,rent,color);
     }
@@ -11,8 +13,14 @@ public class CitySquare extends Square {
         if(! (getOwner() == null)){
 
             if(! (getOwner() == player)){
+                double rent;
 
-                double rent = getRent(); // verilecek kira bedeli
+                if(same == 1){
+                    rent = getRent() * 2;
+                }
+                else {
+                    rent = getRent();
+                  }
                 System.out.println(player.getName() + " pays the rent "+ rent +"-----> " + getOwner().getName());
                 player.getMoney().decreaseAmount(rent);
                 getOwner().getMoney().increaseAmount(rent);
@@ -21,7 +29,6 @@ public class CitySquare extends Square {
         }
         //gelinen city karesi sahipli değilse
         else{
-            //System.out.println("ıcerdeyımm");
             if(faceV > 8){
                 if(player.getMoney().getAmount() >= getFee()){
                     setOwner(player);
@@ -32,5 +39,12 @@ public class CitySquare extends Square {
                 }
             }
         }
+    }
+    public int getSame() {
+        return same;
+    }
+
+    public void setSame(int same) {
+        this.same = this.same + same;
     }
 }
