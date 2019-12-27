@@ -7,6 +7,10 @@ public class Money extends Player {
         amount = 0.0;
     }
 
+    public Money(int money){
+         setAmount(money);
+    }
+
     private double amount;
 
     public void setAmount(double amount) {

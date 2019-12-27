@@ -1,4 +1,4 @@
-/*
+/* ONLY FOR STEP 1
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
