@@ -17,7 +17,7 @@ public class StationsSquare extends Square {
        // b1 = new Board();
       // stationsSquaresList =  b1.getStationsSquaresList();
 
-        System.out.println("wwwwwwwwww");
+        //System.out.println("wwwwwwwwww");
         //gelinen city karesi sahipliyse
         if(! (getOwner() == null)){
 
