@@ -9,17 +9,19 @@ public abstract class Square extends Board{
     private double fee = 0.0;
     private double rent = 0.0;
     private String color ="";
+    private double houseCost = 0.0;
 
     public Square(){}
 
 
-    public Square(String name,String type, int index, double fee,double rent,String color) {
+    public Square(String name,String type, int index, double fee,double rent,String color,double houseCost) {
      this.name=name;
      this.type=type;
      this.index=index;
      this.fee=fee;
      this.rent = rent;
      this.color = color;
+     this.houseCost = houseCost;
     }
 
     public void setName(String name) {
@@ -76,6 +78,14 @@ public abstract class Square extends Board{
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public double getHouseCost() {
+        return houseCost;
+    }
+
+    public void setHouseCost(double houseCost) {
+        this.houseCost = houseCost;
     }
 
     public void LosingSquares(Player player){
