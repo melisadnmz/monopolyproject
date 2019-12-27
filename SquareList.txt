@@ -1,40 +1,40 @@
-GO-Other-0-0-0-White
-Kasımpaşa-City-1-60-10-Brown
-Community Chest-CommunityChest-2-0-0-White
-Dolapdere-City-3-60-20-Brown
-Tax-Other-9-0-0-0-White
-Haydarpaşa Tren Istasyonu-Stations-5-200-200-Black
-Sultanahmet-City-6-100-30-Blue
-Chance-Chance-7-0-0-White
-Karaköy-City-8-100-30-Blue
-Tax-Other-9-0-0-0-White
-Jail-Jail-10-0-0-White
-Jail-Other-11-0-0-White
-Electric Company-Corporation-12-150-150-Grey
-Beşiktaş-City-13-140-50-Pink
-Taksim-City-14-160-60-Pink
-Kadikoy Vapur Iskelesi-Stations-15-200-200-Black
-Harbiye-City-16-180-70-Orange
-Community Chest-CommunityChest-17-0-0-White
-Tax-Other-18-0-0-0-White
-Mecidiyekoy-City-19-200-80-Orange
-FreeParking-Other-20-0-0-White
-Bostanci-City-21-220-90-Red
-Chance-Chance-22-0-0-White
-Jail-Other-23-0-0-White
-Caddebostan-City-24-240-100-Red
-Kabatas Vapur Iskelesi-Stations-25-200-200-Black
-Nisantasi-City-26-260-110-Yellow
-Jail-Other-27-0-0-0-White
-Water Works-Corporation-28-150-150-Grey
-Macka-City-29-280-120-Yellow
-GoToJail-Jail-30-0-0-White
-Levent-City-31-300-130-Green
-Jail-Other-32-0-0-White
-Community Chest-CommunityChest-33-0-0-White
-Bebek-City-34-320-150-Green
-Sirkeci Tren Istasyonu-Stations-35-200-200-Black
-Chance-Chance-36-0-0-White
-Tarabya-City-37-350-175-Dark blue
-Tax-Other-38-0-0-0-White
-Yenikoy-City-39-400-200-Dark blue
+GO-Other-0-0-0-White-0
+Kasımpaşa-City-1-60-10-Brown-90
+Community Chest-CommunityChest-2-0-0-White-0
+Dolapdere-City-3-60-20-Brown-95
+Tax-Other-4-0-0-White-0
+Haydarpaşa Tren Istasyonu-Stations-5-200-200-Black-0
+Sultanahmet-City-6-100-30-Blue-120
+Chance-Chance-7-0-0-White-0
+Karaköy-City-8-100-30-Blue-130
+Tax-Other-9-0-0-White-0
+Jail-Jail-10-0-0-White-0
+Jail-Other-11-0-0-White-0
+Electric Company-Corporation-12-150-150-Grey-0
+Beşiktaş-City-13-140-50-Pink-160
+Taksim-City-14-160-60-Pink-200
+Kadikoy Vapur Iskelesi-Stations-15-200-200-Black-0
+Harbiye-City-16-180-70-Orange-230
+Community Chest-CommunityChest-17-0-0-White-0
+Tax-Other-18-0-0-White-0
+Mecidiyekoy-City-19-200-80-Orange-245
+FreeParking-Other-20-0-0-White-0
+Bostanci-City-21-220-90-Red-275
+Chance-Chance-22-0-0-White-0
+Jail-Other-23-0-0-White-0
+Caddebostan-City-24-240-100-Red-290
+Kabatas Vapur Iskelesi-Stations-25-200-200-Black-0
+Nisantasi-City-26-260-110-Yellow-310
+Jail-Other-27-0-0-White-0
+Water Works-Corporation-28-150-150-Grey-0
+Macka-City-29-280-120-Yellow-325
+GoToJail-Jail-30-0-0-White-0
+Levent-City-31-300-130-Green-350
+Jail-Other-32-0-0-White-0
+Community Chest-CommunityChest-33-0-0-White-0
+Bebek-City-34-320-150-Green-380
+Sirkeci Tren Istasyonu-Stations-35-200-200-Black-0
+Chance-Chance-36-0-0-White-0
+Tarabya-City-37-350-175-Dark blue-410
+Tax-Other-38-0-0-White-0
+Yenikoy-City-39-400-200-Dark blue-430
