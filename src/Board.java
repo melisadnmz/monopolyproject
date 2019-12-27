@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -14,6 +13,7 @@ public class Board extends Monopoly {
 
     }
 
+
     public void createSquare() { //This method will be use 2nd iteration.
         try{
             BufferedReader in = new BufferedReader(new FileReader("SquareList.txt"));
@@ -23,35 +23,35 @@ public class Board extends Monopoly {
                 String[] var = s.split("-");
                 switch(var[1]) {
                     case "City":
-                        CitySquare city = new CitySquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5]);
+                        CitySquare city = new CitySquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5], Integer.parseInt(var[6]));
                         squares[i] = city;
                         break;
                     case "Stations":
-                        StationsSquare station = new StationsSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5]);
+                        StationsSquare station = new StationsSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5], Integer.parseInt(var[6]));
                         squares[i] = station;
                         break;
                     case "Corporation":
-                        CorporationSquare corporation = new CorporationSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5]);
+                        CorporationSquare corporation = new CorporationSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5], Integer.parseInt(var[6]));
                         squares[i] = corporation;
                         break;
                     case "Jail":
-                        JailSquare jail = new JailSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5]);
+                        JailSquare jail = new JailSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5], Integer.parseInt(var[6]));
                         squares[i] = jail;
                         break;
                     case "Tax":
-                        TaxSquare tax = new TaxSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5]);
+                        TaxSquare tax = new TaxSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5], Integer.parseInt(var[6]));
                         squares[i] = tax;
                         break;
                     case "Chance":
-                        ChanceSquare chance = new ChanceSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5]);
+                        ChanceSquare chance = new ChanceSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5], Integer.parseInt(var[6]));
                         squares[i] = chance;
                         break;
                     case "CommunityChest":
-                        CommunityChestSquare chest = new CommunityChestSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5]);
+                        CommunityChestSquare chest = new CommunityChestSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5], Integer.parseInt(var[6]));
                         squares[i] = chest;
                         break;
                     case "Other":
-                        OtherSquare other = new OtherSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5]);
+                        OtherSquare other = new OtherSquare(var[0], var[1], Integer.parseInt(var[2]), Integer.parseInt(var[3]),Integer.parseInt(var[4]), var[5], Integer.parseInt(var[6]));
                         squares[i] = other;
                         break;
                     default: //for other
@@ -64,9 +64,17 @@ public class Board extends Monopoly {
         }catch(Exception e){
             e.printStackTrace();
         }
+
+
+
     }
 
     public Square[] getSquare(){
+        return squares;
+    }
+
+    public Square[] setSquare(Square[] squares){
+        this.squares = squares;
         return squares;
     }
 
@@ -77,7 +85,7 @@ public class Board extends Monopoly {
             if (numOfTax==0)
                 break;
             if(squares[i].getName().equals("Tax") && squares[i].getType().equals("Other")){
-                TaxSquare taxSquare = new TaxSquare("Tax","Tax",squares[i].getIndex(),amountOfTax(),squares[i].getRent(),squares[i].getColor());
+                TaxSquare taxSquare = new TaxSquare("Tax","Tax",squares[i].getIndex(),amountOfTax(),squares[i].getRent(),squares[i].getColor(),squares[i].getHouseCost());
                 squares[i] = taxSquare;
                 numOfTax--;
             }
@@ -142,7 +150,7 @@ public class Board extends Monopoly {
             if (numOfJail==1)
                 break;
             if(squares[i].getName().equals("Jail") && squares[i].getType().equals("Other")){
-                JailSquare jailSquare = new JailSquare("GoToJail","Jail",squares[i].getIndex(),squares[i].getFee(),squares[i].getRent(),squares[i].getColor());
+                JailSquare jailSquare = new JailSquare("GoToJail","Jail",squares[i].getIndex(),squares[i].getFee(),squares[i].getRent(),squares[i].getColor(),squares[i].getHouseCost());
                 squares[i] = jailSquare;
                 numOfJail--;
             }
@@ -168,5 +176,4 @@ public class Board extends Monopoly {
         }
 
         }
-
 }
