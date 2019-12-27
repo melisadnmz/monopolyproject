@@ -120,6 +120,11 @@ public class Monopoly {
 
 
                 System.out.println(toStringAfter(players.get(i), board));
+                System.out.println(board.getSquare()[newLocation].getColor());
+                String owner="";
+                if(board.getSquare()[newLocation].getOwner() != null){
+                 owner = board.getSquare()[newLocation].getOwner().getName();}
+                checkColor(board.getSquare()[newLocation].getColor(),owner,board);
                 board.getSquare()[newLocation].play(players.get(i));
                 System.out.println(toStringMoney(players.get(i)));
 
@@ -388,6 +393,32 @@ public class Monopoly {
                     board.getSquare()[i].getFee());
 
         }
+    }
+
+    public void checkColor(String color, String owner , Board board){
+        for (int i = 0; i <board.getSquare().length; i++) {
+            if (board.getSquare()[i] instanceof StationsSquare || board.getSquare()[i] instanceof CitySquare || board.getSquare()[i] instanceof CorporationSquare) {
+                //System.out.println("color" + color + "owner" + owner.getName() + "item color " + board.getSquare()[i].getColor() + "item owner " + board.getSquare()[i].getOwner());
+                if (board.getSquare()[i].getColor().equals(color)) {
+                    if(board.getSquare()[i].getOwner() != null && i!=newLocation){
+                    if (board.getSquare()[i].getOwner().getName().equals(owner)) {
+                        if(board.getSquare()[i] instanceof StationsSquare){
+                            ((StationsSquare) board.getSquare()[i]).setSame(1);
+                        }
+                        else if(board.getSquare()[i] instanceof CitySquare){
+                            ((CitySquare) board.getSquare()[i]).setSame(1);
+                        }
+                        else{
+                            ((CorporationSquare) board.getSquare()[i]).setSame(1);
+                        }
+
+                    }
+                    }
+                }
+            }
+
+        }
+
     }
 }
 

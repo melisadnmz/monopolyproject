@@ -1,5 +1,6 @@
 public class CorporationSquare extends Square {
 
+    private int same = 0;
     public CorporationSquare(String name, String type, int index, double fee,double rent, String color) {
         super(name, type, index, fee,rent, color);
     }
@@ -13,13 +14,13 @@ public class CorporationSquare extends Square {
 
             if (!(getOwner() == player)) {//ve sahibi o degilse
 
-                if (true) {//burada gelinen yerin sahibi sadece birine sahip ise
+                if (same == 0) {//burada gelinen yerin sahibi sadece birine sahip ise
                     double rent = 4 * faceV;
                     player.getMoney().decreaseAmount(rent);
                     getOwner().getMoney().increaseAmount(rent);
                     System.out.println(player.getName() + " pays the rent "+ rent +"-----> " + getOwner().getName());
                 }
-                if (false) {//burada gelinen yerin sahibi her iki corporationada sahipse
+                if (same == 1) {//burada gelinen yerin sahibi her iki corporationada sahipse
                     double rent = 10 * faceV;
                     player.getMoney().decreaseAmount(rent);
                     getOwner().getMoney().increaseAmount(rent);
@@ -39,6 +40,14 @@ public class CorporationSquare extends Square {
             }
         }
 
+    }
+
+    public int getSame() {
+        return same;
+    }
+
+    public void setSame(int same) {
+        this.same = this.same + same;
     }
 
 }
